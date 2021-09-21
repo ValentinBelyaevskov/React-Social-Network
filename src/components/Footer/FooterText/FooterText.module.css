@@ -1,0 +1,4 @@
+.footerText {
+   grid-column: 3 / 4;
+   justify-self: end;
+}

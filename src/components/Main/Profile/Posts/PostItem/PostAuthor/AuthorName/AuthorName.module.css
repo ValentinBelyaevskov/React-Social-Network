@@ -1,0 +1,10 @@
+.authorName {
+   grid-area: name;
+
+   align-self: end;
+   padding: 0 0 0.4rem 1.3rem;
+
+   font-weight: bold;
+
+   color: rgb(36, 36, 36)
+}
