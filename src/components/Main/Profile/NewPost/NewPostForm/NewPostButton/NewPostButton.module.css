@@ -1,0 +1,18 @@
+.newPostButton {
+   grid-column: 3 / 4;
+   background-color: rgb(64, 202, 205);
+   color: #fff;
+   font-size: 1.5rem;
+   border-radius: 0.6rem;
+   transition-property: background-color;
+   transition-duration: 0.2s;
+
+}
+
+.newPostButton:hover {
+   background-color: rgb(67, 177, 179);
+}
+
+.newPostButton:active {
+   background-color: rgb(61, 166, 167);
+}

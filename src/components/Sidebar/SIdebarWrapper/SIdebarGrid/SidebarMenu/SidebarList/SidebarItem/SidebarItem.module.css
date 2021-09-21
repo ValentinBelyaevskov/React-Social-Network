@@ -1,0 +1,16 @@
+.sidebarItem {
+   padding: 1rem;
+   border-radius: 0.6rem;
+
+   transition-property: background-color;
+   transition-duration: 0.2s;
+}
+
+.sidebarItem:hover {
+   cursor: pointer;
+   background-color: rgb(154, 154, 154);
+}
+
+.sidebarItem:active {
+   background-color: rgb(140, 140, 140);
+}

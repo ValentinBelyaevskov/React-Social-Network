@@ -1,0 +1,7 @@
+.searchForm {
+   height: 100%;
+   display: grid;
+   grid-template-columns: 1fr minmax(50px, auto);
+   align-items: center;
+   justify-items: end;
+}

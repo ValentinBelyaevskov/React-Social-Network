@@ -1,0 +1,13 @@
+.sidebarGrid {
+      
+   grid-column: 2 / 3;
+
+   padding: 1rem;
+
+   background-color: rgb(171, 170, 170);
+   color: #fff;
+   font-size: 1.1rem;
+   text-transform: uppercase;
+
+   border-radius: 0.6rem;
+}

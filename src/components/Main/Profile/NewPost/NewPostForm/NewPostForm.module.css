@@ -1,0 +1,5 @@
+.newPostForm {
+   display: grid;
+   grid-template-columns: 0.73fr 0.02fr 0.25fr;
+   height: 100%;
+}
