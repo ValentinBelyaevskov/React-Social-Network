@@ -1,23 +1,17 @@
 import './App.css';
 import Footer from './components/Footer';
 import Header from './components/Header';
-import Profile from './components/Profile';
+import Main from './components/Main';
 import Sidebar from './components/Sidebar';
 
 
 function App() {
    return (
       <div className="wrapper">
-
          <Header />
          <Sidebar />
-
-         <main className="main">
-            <Profile />
-         </main>
-
+         <Main />
          <Footer />
-
       </div>  // wrapper
    );
 }

@@ -295,44 +295,31 @@ html {
 .main .user__data {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 0.45fr 0.55fr;
-  grid-template-columns: 0.45fr 0.55fr;
-  -ms-grid-rows: 0.25fr 0.7fr;
-  grid-template-rows: 0.25fr 0.7fr;
-      grid-template-areas: "name name" "properties values";
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  -ms-grid-rows: 0.25fr 0.75fr;
+  grid-template-rows: 0.25fr 0.75fr;
   padding-left: 2rem;
   font-size: 1.2rem;
 }
 .main .user__name {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: name;
-  -ms-grid-row-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
       align-self: center;
   font-size: 2rem;
 }
-.main .user__data-properties, .main .user__data-values {
+.main .user__info-item {
   display: -ms-grid;
   display: grid;
-  grid-auto-rows: minmax(2.2rem, auto);
+  -ms-grid-columns: 0.4fr 0.6fr;
+  grid-template-columns: 0.4fr 0.6fr;
+  height: 2rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
-.main .user__data-properties {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: properties;
+.main .user__info-property {
   color: #242424;
 }
-.main .user__data-values {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: values;
+.main .user__info-value {
   color: rgba(125, 125, 125, 0.9);
 }
 .main .new-post {
@@ -468,8 +455,8 @@ html {
 .main .post .author__name {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
   grid-area: name;
+  -ms-grid-row-align: end;
       align-self: end;
   padding: 0 0 0.4rem 1.3rem;
   font-weight: bold;
