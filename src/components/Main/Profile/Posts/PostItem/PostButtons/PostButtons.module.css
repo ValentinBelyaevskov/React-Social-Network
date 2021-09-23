@@ -1,5 +1,4 @@
 .postButtons {
    padding-top: 1rem;
-   display: grid;
-   grid-template-columns: minmax(5rem, auto) minmax(5rem, auto) minmax(5rem, auto) 1fr;
+   display: flex;
 }

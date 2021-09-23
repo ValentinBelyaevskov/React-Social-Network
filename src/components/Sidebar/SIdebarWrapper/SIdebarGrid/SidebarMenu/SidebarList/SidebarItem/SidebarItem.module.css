@@ -1,9 +1,6 @@
 .sidebarItem {
-   padding: 1rem;
+   padding: 0.8rem;
    border-radius: 0.6rem;
-
-   transition-property: background-color;
-   transition-duration: 0.2s;
 }
 
 .sidebarItem:hover {

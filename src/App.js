@@ -9,8 +9,8 @@ function App() {
    return (
       <div className="wrapper">
          <Header />
-         <Sidebar />
          <Main />
+         <Sidebar />
          <Footer />
       </div>  // wrapper
    );

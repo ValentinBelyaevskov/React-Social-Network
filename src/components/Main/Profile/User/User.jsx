@@ -2,10 +2,10 @@ import UserAvatar from "./UserAvatar/UserAvatar"
 import UserData from "./UserData/UserData"
 import s from './User.module.css'
 
-const User = () => (
+const User = ({data}) => (
    <div className={s.user}>
-      <UserAvatar image="https://i.pinimg.com/564x/91/97/f2/9197f24f198f0e93d062e66a702d3be4.jpg" />
-      <UserData />
+      <UserAvatar image={data.avatar} />
+      <UserData data={data}/>
    </div>
 )
 

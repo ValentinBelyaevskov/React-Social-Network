@@ -10,4 +10,6 @@
    text-transform: uppercase;
 
    border-radius: 0.6rem;
+
+   position: relative;
 }
