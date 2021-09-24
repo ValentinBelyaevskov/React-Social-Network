@@ -74,6 +74,56 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   background-color: #e6e6e6;
+}
+
+.header {
+  background-color: #40cacd;
+}
+
+.sidebar__wrapper {
+  background-color: #abaaaa;
+  color: #fff;
+}
+
+.post {
+  background-color: lightgray;
+}
+
+.messages__dialogs-item {
+  background-color: lightgray;
+}
+.messages__dialogs-item:hover {
+  background-color: #c8c8c8;
+}
+
+.footer {
+  background-color: #40cacd;
+  color: rgba(55, 55, 55, 0.8);
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.profile {
+  z-index: 2;
+  position: relative;
+}
+
+.messages__dialogs-item {
+  position: relative;
+  z-index: 2;
+}
+
+.message__search-wrapper {
+  position: fixed;
+  z-index: 3;
+}
+
+body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -254,8 +304,15 @@ html {
   width: 100%;
 }
 .main .post__image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
   display: block;
   width: 100%;
+}
+.main .post__image img {
+  max-height: 50vh;
 }
 .main .post .buttons__item-image {
   position: relative;
@@ -371,26 +428,4 @@ html {
 }
 .main .messages__person-avatar img {
   border-radius: 50%;
-}
-
-.sidebar__wrapper {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 1;
-}
-
-.profile {
-  z-index: 2;
-  position: relative;
-}
-
-.messages__dialogs-item {
-  position: relative;
-  z-index: 2;
-}
-
-.message__search-wrapper {
-  position: fixed;
-  z-index: 3;
 }

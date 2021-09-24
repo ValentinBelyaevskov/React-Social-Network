@@ -1,13 +1,23 @@
 import Profile from './Profile/Profile';
 import s from "./Main.module.css";
-import Message from './Message/Message';
-import data from '../../data/profile/data';
-import messages from '../../data/messages/messages';
+import Messages from './Messages/Message';
+import messages from '../../data/userData/messages';
+import { Route, Switch } from 'react-router-dom';
+import ErrorNotFound from './Error/ErrorNotFound';
 
 const Main = () => (
    <main className={`${s.main} main`}>
-      {/* <Profile data={data}/> */}
-      <Message messages={messages}/>
+      <Switch>
+         <Route path="/messages">
+            <Messages messages={messages} />
+         </Route>
+         <Route path="/">
+            <Profile />
+         </Route>
+         <Route>
+            <ErrorNotFound/>
+         </Route>
+      </Switch>
    </main>
 )
 

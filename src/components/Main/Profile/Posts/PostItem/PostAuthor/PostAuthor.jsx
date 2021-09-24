@@ -1,13 +1,13 @@
-import AuthorDate from "./AuthorDate/AuthorDate"
-import AuthorImage from "./AuthorImage/AuthorImage"
-import AuthorName from "./AuthorName/AuthorName"
+import PostDate from "./PostDate"
+import AuthorImage from "./AuthorImage"
+import AuthorName from "./AuthorName"
 import s from "./PostAuthor.module.css";
 
 const PostAuthor = ({image, name, date}) => (
    <div className={s.postAuthor}>
       <AuthorImage image={image}/>
       <AuthorName name={name}/>
-      <AuthorDate date={date}/>
+      <PostDate date={date}/>
    </div>
 )
 

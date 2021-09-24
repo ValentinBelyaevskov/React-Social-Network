@@ -1,14 +1,17 @@
 import PostItem from "./PostItem/PostItem"
 
 const Posts = ({data}) => (
-   <div className="posts">
-      {data.map(item => (
-         <PostItem
-            image={item.images}
-            date={item.date}
-            text={item.text}
-         />)
-      )}
+   <div>
+      {data.map(
+         (item, i) => (
+            <PostItem
+               key={i}
+               image={item.images}
+               date={item.date}
+               text={item.text}
+            />)
+         )
+      }
    </div>
 )
 

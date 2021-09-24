@@ -1,9 +1,13 @@
-import SearchForm from "./SearchForm/SearchForm"
 import s from "./HeaderSearch.module.css"
+import SearchImage from "./SearchImage"
+import SearchInput from "./SearchInput"
 
-const HeaderSearch = ({image}) => (
+const HeaderSearch = ({ image }) => (
    <div className={`${s.headerSearch} search`}>
-      <SearchForm image={image}/>
+      <form className={s.searchForm}>
+         <SearchInput/>
+         <SearchImage image={image}/>
+      </form>
    </div>
 )
 

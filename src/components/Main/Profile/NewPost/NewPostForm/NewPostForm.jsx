@@ -1,5 +1,5 @@
-import NewPostButton from "./NewPostButton/NewPostButton"
-import NewPostInput from "./NewPostInput/NewPostInput"
+import NewPostButton from "./NewPostButton"
+import NewPostInput from "./NewPostInput"
 import s from "./NewPostForm.module.css"
 
 const NewPostForm = () => (

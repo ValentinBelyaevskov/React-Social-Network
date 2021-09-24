@@ -1,5 +1,5 @@
 import s from "./PostButtons.module.css";
-import ButtonsItem from "./PostButtonsItem/PostButtonsItem";
+import ButtonsItem from "./PostButtonsItem";
 
 const PostButtons = ({like, comment, repost}) => (
    <div className={s.postButtons}>

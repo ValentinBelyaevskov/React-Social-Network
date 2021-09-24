@@ -3,13 +3,19 @@ import PostButtons from "./PostButtons/PostButtons"
 import PostImage from "./PostImage/PostImage"
 import PostText from "./PostText/PostText"
 import s from "./PostItem.module.css";
+import appData from "../../../../../data/appData/appData";
+import profileData from "../../../../../data/userData/profileData";
 
 const PostItem = ({image, date, text}) => (
    <div className={`${s.postItem} post`}>
-      <PostAuthor image="https://i.pinimg.com/564x/91/97/f2/9197f24f198f0e93d062e66a702d3be4.jpg" name="Ivan Ivanov" date={date}/>
+      <PostAuthor image={profileData.myProfile.avatar} name={profileData.myProfile.name} date={date}/>
       <PostText text={text}/>
       <PostImage image={image}/>
-      <PostButtons like="4213423-active-favorite-heart-like-love-romantic_115369.svg" comment="comments_alt_icon_125319 (1).svg" repost="share-symbol_icon-icons.com_73418.svg" />
+      <PostButtons
+         like={appData.profilePage.postButtonsImg.like}
+         comment={appData.profilePage.postButtonsImg.comment}
+         repost={appData.profilePage.postButtonsImg.repost}
+      />
    </div>
 )
 

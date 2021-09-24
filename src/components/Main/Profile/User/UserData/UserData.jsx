@@ -1,5 +1,5 @@
-import UserInfo from "./UserInfo/UserInfo"
-import UserName from "./UserName/UserName"
+import UserInfo from "./UserInfo"
+import UserName from "./UserName"
 import s from "./UserData.module.css"
 
 const UserData = ({data}) => (
