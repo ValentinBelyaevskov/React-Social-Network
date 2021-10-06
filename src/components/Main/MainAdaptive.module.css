@@ -1,0 +1,17 @@
+@media (max-width: 1360px) {
+   .main {
+      grid-template-columns: minmax(21.5rem, 1fr) 550px minmax(21.5rem, 1fr);
+   }
+}
+
+@media (max-width: 1022px) {
+   .main {
+      grid-template-columns: minmax(18rem, 1fr) 550px minmax(18rem, 1fr);
+   }
+}
+
+@media (max-width: 960px) {
+   .main {
+      grid-template-columns: 18rem 550px minmax(6.5rem, auto);
+   }
+}

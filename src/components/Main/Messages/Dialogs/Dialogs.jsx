@@ -1,16 +1,21 @@
 import s from "./Dialogs.module.css"
-import DialogsItem from "./DialogsItem/DialogsItem"
+import DialogsItem from "./DialogsItem"
 import messageShrink from "../../../../lib/messageShrink"
 
-const Dialogs = ({messages}) => (
+const Dialogs = ({ state }) => (
    <div className={s.dialogs}>
-      {messages.map((item, i) => (
+      {state.friends.map((item, i) => (
          <DialogsItem
             key={i}
-            image={item.avatar}
-            name={item.name}
-            message={messageShrink(item.message)}
-            date={item.date}
+            content={
+               {
+                  dialogNumber: i,
+                  image: item.avatar,
+                  name: item.name,
+                  message: messageShrink(state.messages[item.name][0].message),
+                  date: messageShrink(state.messages[item.name][0].date),
+               }
+            }
          />)
       )}
    </div>

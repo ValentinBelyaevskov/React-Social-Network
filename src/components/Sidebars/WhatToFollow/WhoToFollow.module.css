@@ -1,0 +1,28 @@
+.whoToFollow {
+   margin-left: 6.5rem;
+   
+   grid-row: 4 / 5;
+
+   width: fit-content;
+}
+
+.title {
+   margin-bottom: 1.5rem;
+
+   font-size: var(--interface-fz);
+   font-weight: bold;
+   line-height: 2rem;
+}
+
+.showMore {
+   margin-top: 2rem;
+   font-size: var(--main-fz);
+   font-weight: 400;
+   width: fit-content;
+}
+
+.showMore:hover {
+   cursor: pointer;
+   font-weight: 500;
+   color: var(--theme-color);
+}

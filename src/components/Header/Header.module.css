@@ -3,14 +3,17 @@
    left: 0;
    top: 0;
 
-   min-height: 4.5rem;
+   height: 4.5rem;
    width: 100%;
 
    z-index: 4;
 
    display: grid;
-   grid-template-columns: 1fr minmax(150px, auto) minmax(400px, 600px) 1fr;
+   grid-template-columns: minmax(38.5rem, 1fr) 550px minmax(38.5rem, 1fr);
    align-items: center;
 
-   padding: 0 1rem;
+   padding: 0 1.5rem;
+
+   box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.14);
+   background-color: var(--main-color);
 }

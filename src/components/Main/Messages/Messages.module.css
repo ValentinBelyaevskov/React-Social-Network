@@ -1,4 +1,7 @@
 .messages {
-   grid-column: 3 / 4;
-   padding-left: 1rem;
+   grid-column: 2 / 3;
+
+   border: 1px solid var(--border-color);
+
+   border-top: 0;
 }

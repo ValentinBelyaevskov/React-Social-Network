@@ -1,0 +1,58 @@
+const profile = {
+   posts: [
+      {
+         date: "July 21 at 21:19",
+         text: "Sed ut perspiciatis unde omnis",
+         images: ["https://i.pinimg.com/564x/51/90/ac/5190acde39a10ebd71d2edf193bbc9da.jpg"],
+         videos: [""],
+         audio: [""],
+         documents: [""],
+         likes: "120",
+         reposts: "",
+         comments: [""],
+      },
+      {
+         date: "May 14 at 19:05",
+         text: "Post text",
+         images: ["https://i.pinimg.com/564x/88/7c/8f/887c8fc7bb7fcfe15eb3a7139095254a.jpg"],
+         videos: [""],
+         audio: [""],
+         documents: [""],
+         likes: "97",
+         reposts: "4",
+         comments: [""],
+      }, 
+      {
+         date: "May 1 at 22:23",
+         text: "Post text",
+         images: ["https://i.pinimg.com/564x/7b/ce/db/7bcedb2bededd5f48ed0c847ab4b6745.jpg"],
+         videos: [""],
+         audio: [""],
+         documents: [""],
+         likes: "103",
+         reposts: "1",
+         comments: ["4"],
+      },
+      {
+         date: "April 20 at 15:17",
+         text: "Post text",
+         images: ["https://i.pinimg.com/564x/77/14/40/771440492fe85b540fd144cfc7572334.jpg"],
+         videos: [""],
+         audio: [""],
+         documents: [""],
+         likes: "74",
+         reposts: "",
+         comments: ["2"],
+      },
+   ],
+   user: {
+      avatar: "https://i.pinimg.com/564x/91/97/f2/9197f24f198f0e93d062e66a702d3be4.jpg",
+      name: "Ivanov Ivan",
+      ["Date of Birth"]: "03.05.1995",
+      ["City"]: "Moscow",
+      ["Education"]: "Lomonosov MSU",
+      ["E-mail"]: "ivanovivan@mail.ru",
+   },
+}
+
+export default profile

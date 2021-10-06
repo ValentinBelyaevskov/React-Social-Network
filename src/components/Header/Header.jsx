@@ -1,16 +1,13 @@
-import HeaderLogo from './HeaderLogo/HeaderLogo';
 import HeaderSearch from './HeaderSearch/HeaderSearch';
 import s from "./Header.module.css";
-import appData from '../../data/appData/appData';
+import adaptive from "./HeaderAdaptive.module.css";
 
-
-const Header = () => {
-   const headerData = appData.general.header;
+const Header = ({appState}) => {
+   // const headerData = appData.header;
 
    return (
-      <header className={`${s.header} header`}>
-         <HeaderLogo image={headerData.logo} />
-         <HeaderSearch image={headerData.searchLogo} />
+      <header className={`${s.header} ${adaptive.header} header`}>
+         <HeaderSearch image={appState.headerSearch.searchLogo} />
       </header>
    )
 }

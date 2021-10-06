@@ -1,0 +1,31 @@
+@media (max-width: 1360px) {
+   .button {
+      display: none;
+   }
+}
+
+@media (max-width: 1120px) {
+   .whoToFollow {
+      display: none;
+   }
+}
+
+@media (max-width: 1095px) {
+   .friendsOnline {
+      display: none;
+   }
+}
+
+@media (max-width: 960px) {
+   .sidebars {
+      grid-template-columns: 19.5rem 550px minmax(8rem, auto);
+   }
+
+   .controlsList {
+      margin-left: 4.3rem;
+   }
+
+   .actual {
+      display: none;
+   }
+}

@@ -1,0 +1,17 @@
+.actual {
+   margin-left: 6.5rem;
+   max-width: 11rem;
+   min-width: 8.2rem;
+
+   height: fit-content;
+
+   grid-row: 2 / 3;
+}
+
+.title {
+   margin-bottom: 1.8rem;
+
+   font-size: var(--interface-fz);
+   font-weight: bold;
+   line-height: 2rem;
+}

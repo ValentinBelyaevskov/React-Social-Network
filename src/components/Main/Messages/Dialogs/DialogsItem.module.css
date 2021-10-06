@@ -1,0 +1,69 @@
+.dialogsItem {
+   display: grid;
+   grid-template-columns: 5rem 1fr minmax(5rem, auto);
+   grid-auto-rows: repeat(2, minmax(auto, 35px));
+   grid-template-areas:
+      "avatar name    date"
+      "avatar message message";
+   align-items: center;
+
+   padding: 0.8rem 2rem;
+
+   background-color: var(--message-color);
+}
+
+.dialogsItem:first-child {
+   padding-top: 1.6rem;
+}
+
+.dialogsItem:last-child {
+   margin: 0;
+}
+
+.dialogsItem:hover {
+   cursor: pointer;
+   background-color: rgba(235, 235, 235, 0.55);
+}
+
+.personAvatar {
+   grid-area: avatar;
+}
+
+.personName,
+.personMessage {
+   padding-left: 1.5rem;
+}
+
+.personName {
+   grid-area: name;
+
+   font-size: var(--main-fz);
+   color: var(--base-fontColor);
+   font-weight: 500;
+}
+
+.personMessage {
+   grid-area: message;
+
+   justify-self: start;
+
+   font-size: var(--secondary-fz);
+   color: var(--base-fontColor);
+   font-weight: 400;
+
+   opacity: 0.56;
+}
+
+.messageDate {
+   margin-right: 1rem;
+
+   grid-area: date;
+
+   justify-self: end;
+
+   font-size: 1.1rem;
+   color: var(--base-fontColor);
+   font-weight: 400;
+
+   opacity: 0.56;
+}

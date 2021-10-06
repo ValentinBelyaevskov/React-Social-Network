@@ -1,4 +1,5 @@
 .userName {
-   align-self: center;
-   font-size: 2rem;
+   font-size: var(--interface-fz);
+   font-weight: 500;
+   line-height: 2.1rem;
 }

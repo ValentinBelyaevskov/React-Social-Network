@@ -1,8 +1,0 @@
-.personMessage {
-   grid-area: message;
-
-   justify-self: start;
-
-   font-size: 1.2rem;
-   color: rgb(76, 76, 76);
-}

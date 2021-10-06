@@ -1,4 +1,8 @@
 .profile {
-   grid-column: 3 / 4;
-   padding-left: 1rem;
+   grid-column: 2 / 3;
+
+   background-color: var(--bcg-color);
+
+   border: 1px solid var(--border-color);
+   border-top: 0;
 }

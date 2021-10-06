@@ -1,5 +1,36 @@
 .postItem {
-   margin-top: 1rem;
-   padding: 1rem;
-   border-radius: 0.6rem;
+   margin-bottom: 1rem;
+
+   padding: 2rem;
+
+   background-color: var(--main-color);
+   box-shadow: 0px 0px 0.5px rgba(0, 0, 0, 0.25);
+}
+
+.postText {
+   margin: 1.2rem 0;
+
+   font-size: var(--main-fz);
+   font-weight: 400;
+   color: var(--base-fontColor);
+}
+
+.postButtons {
+   padding-top: 1.2rem;
+   display: grid;
+   grid-template-columns: minmax(3.8rem, 5.4rem) 4rem minmax(3.8rem, 5.4rem) 4rem minmax(3.8rem, 5.4rem) 1fr;
+
+   justify-items: center;
+}
+
+.like {
+   grid-column: 1 / 2;
+}
+
+.comment {
+   grid-column: 3 / 4;
+}
+
+.repost {
+   grid-column: 5 / 6;
 }

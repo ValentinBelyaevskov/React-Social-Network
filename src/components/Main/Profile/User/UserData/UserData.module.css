@@ -1,6 +1,7 @@
 .userData {
    display: grid;
-   grid-template-rows: 0.25fr 0.75fr;
-   padding-left: 2rem;
-   font-size: 1.2rem;
+   grid-template-rows: 3.4rem 1fr;
+   align-items: start;
+
+   grid-column: 4 / 5;
 }

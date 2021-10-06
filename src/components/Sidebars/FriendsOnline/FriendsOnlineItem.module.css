@@ -1,0 +1,49 @@
+.gridContainer {
+   display: grid;
+   grid-template-columns: minmax(5rem, max-content) minmax(10rem, max-content);
+   grid-template-rows: repeat(2, minmax(2.5rem, max-content));
+   grid-template-areas: "avatar name"
+                        "avatar location";
+
+   padding: 0.75rem 0;
+
+   align-items: center;
+}
+
+.gridContainer:hover {
+   cursor: pointer;
+}
+
+.avatar {
+   grid-area: avatar;
+
+   justify-self: center;
+
+   transition-duration: 0.03s;
+
+}
+
+.avatar img {
+   /* box-shadow: 0px 1px 4px 1px rgb(0 0 0 / 25%); */
+}
+
+.name,
+.location {
+   padding-left: 1rem;
+}
+
+.name {
+   grid-area: name;
+   font-size: var(--main-fz);
+   color: var(--base-fontColor);
+   font-weight: 500;
+}
+
+.location {
+   grid-area: location;
+   font-size: var(--secondary-fz);
+   color: var(--base-fontColor);
+   font-weight: 400;
+
+   opacity: 0.56;
+}

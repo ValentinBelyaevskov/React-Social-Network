@@ -1,0 +1,19 @@
+.controlsItem {
+   margin-bottom: 1.5rem;
+   font-weight: 300;
+}
+
+.controlsItem:hover {
+   font-weight: bold;
+}
+
+.controlsItem a {
+   line-height: 2rem;
+   color: inherit;
+   font-size: var(--interface-fz);
+}
+
+.controlsItem a.activeLink {
+   color: var(--theme-color);
+   font-weight: bold;
+}

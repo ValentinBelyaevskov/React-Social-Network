@@ -1,15 +1,12 @@
-import NewPost from "./NewPost/NewPost";
 import Posts from "./Posts/Posts";
 import User from "./User/User";
 import s from "./Profile.module.css";
-import data from "../../../data/userData/profileData";
 
-const Profile = () => {
+const Profile = ({appState, state}) => {
    return (
       <div className={`${s.profile} profile`}>
-         <User data={data.myProfile} />
-         <NewPost />
-         <Posts data={data.myPosts}/>
+         <User state={state.user} appState={appState.user} />
+         <Posts state={state} appState={appState.posts}/>
       </div>
    )
 }

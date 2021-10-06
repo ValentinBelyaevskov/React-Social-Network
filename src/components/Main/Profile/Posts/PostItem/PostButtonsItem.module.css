@@ -1,0 +1,31 @@
+.buttonsItem {
+   overflow: hidden;
+
+   width: fit-content;
+
+   display: flex;
+
+   background-color: var(--main-color);
+
+   transition-property: opacity;
+   transition-duration: 0.1s;
+}
+
+.buttonsItem:first-child {
+   margin-left: 0;
+}
+
+.buttonsItem:hover {
+   opacity: 0.6;
+}
+
+.image {
+}
+
+.value {
+   align-self: center;
+   flex-basis: 0;
+   margin-left: 1rem;
+
+   font-size: var(--main-fz);
+}

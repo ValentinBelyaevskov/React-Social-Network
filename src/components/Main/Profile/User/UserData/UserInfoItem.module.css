@@ -1,14 +1,21 @@
 .userInfoItem {
    display: grid;
-   grid-template-columns: 0.4fr 0.6fr;
-   height: 2rem;
-   align-items: center;
+   grid-template-columns: 16.5rem 1fr;
+   height: 2.45rem;
+   align-items: start;
+}
+
+.userInfoProperty,
+.userInfoValue {
+   font-size: var(--main-fz);
+   line-height: 1.5rem;
+   color: var(--base-fontColor);
 }
 
 .userInfoProperty {
-   color: rgb(36, 36, 36);
+
 }
 
 .userInfoValue {
-   color: rgba(125, 125, 125, 0.9);
+   opacity: 0.56;
 }

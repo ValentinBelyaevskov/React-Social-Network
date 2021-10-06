@@ -1,0 +1,86 @@
+.whoToFollowItem {
+   display: grid;
+   grid-template-areas:
+      "avatar community       button"
+      "avatar communityLogin button";
+   grid-template-columns: 5rem 16rem minmax(0, max-content);
+   grid-template-rows: repeat(2, 2.5rem);
+
+   margin-bottom: 1rem;
+}
+
+.whoToFollowItem:hover {
+   cursor: pointer;
+}
+
+.avatar {
+   grid-area: avatar;
+
+   justify-self: center;
+   align-self: center;
+
+   transition-property: width padding;
+   transition-duration: 0.03s;
+}
+
+.community {
+   grid-area: community;
+
+   margin-top: 0.6rem;
+
+   font-size: var(--main-fz);
+   font-weight: 500;
+}
+
+.check {
+   position: relative;
+   top: -0.3rem;
+   left: 0.4rem;
+}
+
+.communityLogin {
+   grid-area: communityLogin;
+
+   margin-bottom: 0.6rem;
+
+   font-size: var(--secondary-fz);
+   font-weight: 300;
+}
+
+.community,
+.communityLogin {
+   margin-left: 1.5rem;
+}
+
+.button {
+   grid-area: button;
+}
+
+.community,
+.communityLogin,
+.button {
+   align-self: center;
+}
+
+.button {
+   width: 98px;
+   height: 37px;
+
+   border-radius: 1rem;
+
+   font-weight: 500;
+   font-size: var(--interface-fz);
+
+   filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
+
+   transition-property: filter background-color;
+   transition-duration: 0.1s;
+
+   background-color: var(--theme-color);
+   color: var(--main-color);
+}
+
+.button:hover {
+   background-color: var(--theme-hover);
+   filter: drop-shadow(0px 2px 5px var(--theme-hover-shadow));
+}

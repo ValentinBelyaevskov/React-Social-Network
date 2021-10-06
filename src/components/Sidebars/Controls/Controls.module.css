@@ -1,0 +1,16 @@
+.controls {
+   grid-column: 1 / 2;
+
+   width: 100%;
+
+   padding-left: 1.5rem;
+
+   color: var(--base-fontColor);
+}
+
+.controlsList {
+   width: 7.2rem;
+   margin: 3.5rem 6.5rem 0 auto;
+
+   position: sticky;
+}

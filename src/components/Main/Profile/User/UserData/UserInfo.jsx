@@ -1,12 +1,11 @@
 import UserInfoItem from "./UserInfoItem"
-import appData from "../../../../../data/appData/appData"
 
-const UserInfo = ({data}) => {
+const UserInfo = ({state, appState}) => {
    return (
       <div className="user__info">
-         {appData.profilePage.userPropertyName.map(
+         {appState.map(
             (property, i) => (
-               <UserInfoItem key={i} property={property} value={data[property]}/>
+               <UserInfoItem key={i} property={property} value={state[property]}/>
             )
          )}
       </div>

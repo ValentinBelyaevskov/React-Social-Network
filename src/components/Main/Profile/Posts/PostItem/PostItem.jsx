@@ -1,21 +1,19 @@
 import PostAuthor from "./PostAuthor/PostAuthor"
-import PostButtons from "./PostButtons/PostButtons"
-import PostImage from "./PostImage/PostImage"
-import PostText from "./PostText/PostText"
 import s from "./PostItem.module.css";
-import appData from "../../../../../data/appData/appData";
-import profileData from "../../../../../data/userData/profileData";
+import ButtonsItem from "./PostButtonsItem";
 
-const PostItem = ({image, date, text}) => (
+const PostItem = ({ state, appState, content}) => (
    <div className={`${s.postItem} post`}>
-      <PostAuthor image={profileData.myProfile.avatar} name={profileData.myProfile.name} date={date}/>
-      <PostText text={text}/>
-      <PostImage image={image}/>
-      <PostButtons
-         like={appData.profilePage.postButtonsImg.like}
-         comment={appData.profilePage.postButtonsImg.comment}
-         repost={appData.profilePage.postButtonsImg.repost}
-      />
+      <PostAuthor image={state.user.avatar} name={state.user.name} date={content.date} />
+      <div className={s.postText}>{content.text}</div>
+      <div className={`${s.postImage} post__image`}>
+         <img src={content.image} alt="" />
+      </div>
+      <div className={s.postButtons}>
+         <ButtonsItem className={s.like} image={appState.postButtonsImg.like} value={state.posts[content.number].likes}/>
+         <ButtonsItem className={s.comment} image={appState.postButtonsImg.comment} value={state.posts[content.number].comments} />
+         <ButtonsItem className={s.repost} image={appState.postButtonsImg.repost} value={state.posts[content.number].reposts} />
+      </div>
    </div>
 )
 

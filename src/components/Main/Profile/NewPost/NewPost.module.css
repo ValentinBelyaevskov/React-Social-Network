@@ -1,7 +1,0 @@
-.newPost {
-   margin-top: 2.2rem;
-
-   display: grid;
-   grid-template-rows: minmax(2.5rem, auto) minmax(3.5rem, auto);
-   align-items: center;
-}

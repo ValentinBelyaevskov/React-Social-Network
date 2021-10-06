@@ -1,0 +1,20 @@
+.newPost {
+   display: grid;
+   grid-template-rows: minmax(3.1rem, auto) minmax(8.8rem, auto);
+   align-items: start;
+
+   grid-area: newPost;
+
+   margin-top: 2rem;
+   padding: 0 2rem;
+
+   width: 100%;
+}
+
+.header {
+   align-self: start;
+
+   font-size: var(--interface-fz);
+   line-height: 2.1rem;
+   font-weight: 400;
+}

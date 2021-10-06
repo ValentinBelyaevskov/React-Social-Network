@@ -2,7 +2,8 @@
    width: 100%;
 
    display: grid;
-   grid-template-columns: 1fr minmax(150px, auto) minmax(400px, 600px) 1fr;
-   
-   padding: 5.5rem 1rem 4rem 1rem;
+   grid-template-columns: minmax(38.5rem, 1fr) 550px minmax(38.5rem, 1fr);
+
+   /* padding: 5rem 1.5rem 1.2rem 1.5rem; */
+   padding: 4.5rem 1.5rem 0 1.5rem;
 }
