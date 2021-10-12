@@ -29,6 +29,7 @@
 }
 
 .searchIcon {
+   transition: ease 0.1s opacity;
 }
 
 .messagesIcon {
@@ -37,6 +38,7 @@
    transition: ease 0.1s opacity;
 }
 
+.searchIcon:hover,
 .messagesIcon:hover {
    cursor: pointer;
    opacity: 0.56;

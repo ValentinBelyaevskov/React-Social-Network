@@ -125,7 +125,6 @@ body {
   padding: 0 0.7rem;
   border-radius: 0.4rem;
   font-size: var(--main-fz);
-  color: var(--input-fontColor);
 }
 .header .search__input::-webkit-input-placeholder {
   color: var(--input-plch-fontColor);
@@ -206,7 +205,6 @@ body {
   padding: 0 0 0 2rem;
   border-radius: 0.4rem;
   font-size: var(--main-fz);
-  color: var(--input-fontColor);
 }
 .main .new-post__input::-webkit-input-placeholder {
   color: var(--input-plch-fontColor);
@@ -282,8 +280,10 @@ body {
 .main .post__image {
   position: relative;
   width: 100%;
+  display: block;
 }
 .main .post__image img {
+  display: block;
   max-width: 100%;
   max-height: 410px;
   -o-object-fit: cover;
@@ -298,7 +298,6 @@ body {
   padding: 0 0;
   border-radius: 0.4rem;
   font-size: var(--main-fz);
-  color: var(--input-fontColor);
 }
 .main .messages__search-input::-webkit-input-placeholder {
   color: var(--input-plch-fontColor);

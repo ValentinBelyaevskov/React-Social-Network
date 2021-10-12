@@ -1,6 +1,5 @@
 const appData = {
 
-
    header: {   // ! header
       headerSearch: {   // ? headerSearch
          logo: "",

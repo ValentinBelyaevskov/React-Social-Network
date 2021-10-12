@@ -1,22 +1,32 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { store, appState } from './redux/store';
+// import renderEntireTree from './lib/renderEntireTree';
+
+// ! При вызове import, файл инициализируется
+
 import { BrowserRouter as Router, } from 'react-router-dom';
-import {state, appState} from './state/state';
+import ReactDOM from 'react-dom';
+import React from 'react';
+import App from './App';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Router>
-      <App state={state} appState={appState} />
-    </Router>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const renderEntireTree = ({ store, appState }) => {
+   ReactDOM.render(
+      <React.StrictMode>
+         <Router>
+            <App
+               state={store.state}
+               dispatch={(action) => store.dispatch(action)}
+               appState={appState}
+            />
+         </Router>
+      </React.StrictMode>,
+      document.getElementById('root')
+   );
+}
 
+renderEntireTree({ store, appState });
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+store.subscribe(() => renderEntireTree({ store, appState }));
+
 reportWebVitals();

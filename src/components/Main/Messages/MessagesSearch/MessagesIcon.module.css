@@ -1,9 +1,0 @@
-.messagesIcon {
-   justify-self: end;
-   transition: ease 0.2s opacity;
-}
-
-.messagesIcon:hover {
-   cursor: pointer;
-   opacity: 0.6;
-}

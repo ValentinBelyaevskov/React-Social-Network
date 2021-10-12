@@ -15,8 +15,10 @@
 
 .input {
    grid-area: input;
+
    font-size: 1.4rem;
    font-weight: 400;
+   color: var(--base-fontColor);
 }
 
 .button {

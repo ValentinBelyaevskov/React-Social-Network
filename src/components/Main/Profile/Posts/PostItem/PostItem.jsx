@@ -11,7 +11,7 @@ const PostItem = ({ state, appState, content}) => (
       </div>
       <div className={s.postButtons}>
          <ButtonsItem className={s.like} image={appState.postButtonsImg.like} value={state.posts[content.number].likes}/>
-         <ButtonsItem className={s.comment} image={appState.postButtonsImg.comment} value={state.posts[content.number].comments} />
+         <ButtonsItem className={s.comment} image={appState.postButtonsImg.comment} value={state.posts[content.number].comments.length} />
          <ButtonsItem className={s.repost} image={appState.postButtonsImg.repost} value={state.posts[content.number].reposts} />
       </div>
    </div>

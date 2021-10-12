@@ -1,4 +1,14 @@
 const profile = {
+   newPost: {
+      text: "",
+      images: "",
+      videos: [],
+      audio: [],
+      documents: [],
+      likes: 0,
+      reposts: 0,
+      comments: [],
+   },
    posts: [
       {
          date: "July 21 at 21:19",
@@ -7,9 +17,9 @@ const profile = {
          videos: [""],
          audio: [""],
          documents: [""],
-         likes: "120",
-         reposts: "",
-         comments: [""],
+         likes: 120,
+         reposts: 0,
+         comments: [],
       },
       {
          date: "May 14 at 19:05",
@@ -18,9 +28,9 @@ const profile = {
          videos: [""],
          audio: [""],
          documents: [""],
-         likes: "97",
-         reposts: "4",
-         comments: [""],
+         likes: 97,
+         reposts: 4,
+         comments: [],
       }, 
       {
          date: "May 1 at 22:23",
@@ -29,9 +39,9 @@ const profile = {
          videos: [""],
          audio: [""],
          documents: [""],
-         likes: "103",
-         reposts: "1",
-         comments: ["4"],
+         likes: 103,
+         reposts: 1,
+         comments: ["lorem ipsum dolor...", "it's very beautiful photo", "where is it?"],
       },
       {
          date: "April 20 at 15:17",
@@ -40,9 +50,9 @@ const profile = {
          videos: [""],
          audio: [""],
          documents: [""],
-         likes: "74",
-         reposts: "",
-         comments: ["2"],
+         likes: 74,
+         reposts: 0,
+         comments: ["classics of the genre", "lorem ipsum dolor..."],
       },
    ],
    user: {

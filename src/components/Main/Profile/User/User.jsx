@@ -3,11 +3,11 @@ import UserData from "./UserData/UserData"
 import s from './User.module.css'
 import NewPost from "./NewPost/NewPost"
 
-const User = ({state, appState}) => (
+const User = ({state, appState, dispatch}) => (
    <div className={s.user}>
-      <UserAvatar image={state.avatar} />
-      <UserData state={state} appState={appState.userData}/>
-      <NewPost state={state} appState={appState.newPost}/>
+      <UserAvatar image={state.user.avatar} />
+      <UserData state={state.user} appState={appState.userData}/>
+      <NewPost state={state} dispatch={dispatch} appState={appState.newPost}/>
    </div>
 )
 
