@@ -1,6 +1,6 @@
 const profile = {
    newPost: {
-      text: "",
+      text: "asdasd asdaw dasdas",
       images: "",
       videos: [],
       audio: [],

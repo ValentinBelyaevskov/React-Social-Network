@@ -1,0 +1,16 @@
+.textarea {
+   overflow: auto;
+
+   font-size: var(--main-fz);
+   resize: none;
+   
+   display: inline-block;
+}
+
+.textarea::placeholder {
+   color: var(--input-plch-fontColor);
+}
+
+.textarea:focus::placeholder {
+   color: var(--input-plch-focus-fontColor);
+}

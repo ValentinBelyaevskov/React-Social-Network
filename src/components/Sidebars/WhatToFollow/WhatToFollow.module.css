@@ -4,7 +4,7 @@
    display: grid;
    grid-template-rows: 3.5rem minmax(36rem, max-content) 5rem minmax(29rem, max-content);
 
-   padding-right: 1.5rem;
+   /* padding-right: 1.5rem; */
 
    color: var(--base-fontColor);
 }

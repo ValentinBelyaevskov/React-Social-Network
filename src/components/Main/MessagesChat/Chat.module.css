@@ -1,0 +1,16 @@
+.chat {
+   grid-column: 2 / 3;
+
+   margin-top: -4.5rem;
+   padding-top: 4.5rem;
+
+   min-height: 100vh;
+   
+   border: 1px solid var(--border-color);
+   border-top: 0;
+   background-color: var(--main-color);
+
+   font-size: var(--main-fz);
+   font-weight: 400;
+   color: var(--base-fontColor);
+}

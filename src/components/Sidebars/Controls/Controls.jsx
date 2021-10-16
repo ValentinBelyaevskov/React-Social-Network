@@ -7,7 +7,7 @@ const Controls = ({appState}) => (
    <aside className={`${s.controls} controls`}>
       <ul className={`${s.controlsList} ${adaptive.controlsList}`}>
          {appState.map(
-            (item, i) => (<ControlsItem key={i} text={item} to={item === "Profile" ? "/" : `/${item}`} />)
+            (item, i) => (<ControlsItem key={i} text={item} to={`/${item}`} />)
          )}
       </ul>
    </aside>

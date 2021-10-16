@@ -12,8 +12,8 @@ const Dialogs = ({ state }) => (
                   dialogNumber: i,
                   image: item.avatar,
                   name: item.name,
-                  message: messageShrink(state.messages[item.name][0].message),
-                  date: messageShrink(state.messages[item.name][0].date),
+                  message: messageShrink(state.messages.dialogs[item.name][0].message),
+                  date: messageShrink(state.messages.dialogs[item.name][0].date),
                }
             }
          />)

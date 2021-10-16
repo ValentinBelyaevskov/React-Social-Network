@@ -1,0 +1,58 @@
+.header {
+   height: 4.5rem;
+   width: 548px;
+   border-bottom: 1px solid var(--border-color);
+
+   background-color: var(--main-color);
+
+   display: grid;
+   grid-template-columns: 7rem minmax(30rem, 1fr) 5rem 4rem;
+   align-items: center;
+}
+
+.backButton {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   width: 5rem;
+
+   margin-right: 0;
+   
+   background-color: var(--main-color);
+   color: #959595;
+   
+   /* font-size: var(--interface-fz); */
+   font-size: 1.4rem;
+   
+   transition: ease 0.1s opacity;
+}
+
+.navLink {
+   justify-self: end;
+   width: fit-content;
+}
+
+.backButton:hover {
+   opacity: 0.56;
+}
+
+.backButtonText {
+}
+
+.interlocutorName {
+   justify-self: center;
+}
+
+.interlocutorAvatar,
+.otherIcon {
+   cursor: pointer;
+}
+
+.otherIcon {
+   transition: ease 0.1s opacity;
+}
+
+.otherIcon:hover {
+   opacity: 0.56;
+}

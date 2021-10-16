@@ -18,9 +18,9 @@ class ControlsItem extends React.Component {
    render() {
       return (
          <li className={`${s.controlsItem} controls__item`}>
-            <NavLink exact to={this.props.to} activeClassName={`${s.activeLink} activeLink`} onClick={(ev) => {
+            <NavLink to={this.props.to} activeClassName={`${s.activeLink} activeLink`} onClick={(ev) => {
                zeroingTheScroll();
-               callSetSidebarPosition(ev.target.textContent)
+               callSetSidebarPosition(ev.target.textContent);
             }}>
                {this.props.text}
             </NavLink>

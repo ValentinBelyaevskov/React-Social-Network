@@ -30,7 +30,7 @@ const setSidebarPosition = (sidebarPosition) => {
       }
 
       if (
-         (Math.round(sidebarSizes.y) == Math.round(getValueWithoutMeasurer(getComputedStyle(sidebar).top)) && currentDir == "up") ||
+         (Math.round(sidebarSizes.y) == Math.round(getValueWithoutMeasurer(getComputedStyle(sidebar).top, 2)) && currentDir == "up") ||
          (sidebarSizes.y == 0 && currentDir == "down")
       ) {
          sidebar.style.position = "absolute";

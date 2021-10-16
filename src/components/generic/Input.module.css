@@ -1,0 +1,14 @@
+.input {
+   display: inline-block;
+
+   width: 100%;
+   height: 100%;
+}
+
+.input::placeholder {
+   color: var(--input-plch-fontColor);
+}
+
+.input:focus::placeholder {
+   color: var(--input-plch-focus-fontColor);
+}

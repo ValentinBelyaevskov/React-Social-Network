@@ -1,0 +1,51 @@
+.entryField {
+   display: grid;
+
+   position: fixed;
+   bottom: 0;
+
+   width: 548px;
+
+   grid-template-columns: 6rem minmax(30rem, 1fr) 6rem 4rem;
+   grid-template-rows: minmax(4.5rem, max-content) minmax(max-content, 3rem);
+   align-items: start;
+   justify-items: center;
+   grid-template-areas: "attachments input emoji send"
+                        "bottom bottom bottom bottom";
+
+   border-top: 1px solid var(--border-color);
+
+   background-color: var(--main-color);
+}
+
+.entryFieldButton:last-of-type {
+   justify-self: start;
+}
+
+.entryFieldButton {
+   background-color: var(--main-color);
+}
+
+.bottom {
+   height: 100%;
+   width: 100%;
+
+   grid-area: bottom;
+   /* background-color: var(--bcg-color); */
+
+   border-top: 1px solid var(--border-color);
+}
+
+.attachments,
+.emoji,
+.sendArrow {
+   transition: ease 0.1s opacity;
+   margin-top: 1.25rem;
+}
+
+.attachments:hover,
+.emoji:hover,
+.sendArrow:hover {
+   cursor: pointer;
+   opacity: 0.56;
+}

@@ -1,4 +1,3 @@
-// import renderEntireTree from "../lib/renderEntireTree";
 import appData from "./appData/appData";
 import friends from "./usersData/friends";
 import messages from "./usersData/messages";
@@ -22,12 +21,13 @@ class Store {
       this._subscriber = observer;
    }
 
-   _changeInputText(action) {
+
+   _changeNewPostText(action) {
       this.state.profile.newPost.text = action.currentText;
       this._subscriber();
    }
 
-   _addPost(action) {
+   _addNewPost(action) {
       let mounths = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
       let civilDate = {
          year: new Date().getFullYear(),
@@ -45,33 +45,69 @@ class Store {
       this.state.profile.posts.unshift(newPostObj);
 
       this._subscriber();
+   }
 
-      this._changeInputText({ type: "CHANGE-INPUT-TEXT", currentText: "" });
+   _dialogsSearch(action) {
+      alert(this.state.messages.search);
+   }
+
+   _changeDialogsSearchText(action) {
+      this.state.messages.search = action.text;
+      this._subscriber();
+   }
+
+   _changeDialogText(action) {
+      this.state.messages.dialogText = action.text;
+      this._subscriber();
    }
 
    dispatch(action) {
-      if (action.type === "CHANGE-INPUT-TEXT") {
-         this._changeInputText(action)
-
-      } else if (action.type === "ADD-POST") {
-         this._addPost(action)
+      if (action.type === "CHANGE-NEW-POST-TEXT") {
+         this._changeNewPostText(action);
+      } else if (action.type === "ADD-NEW-POST") {
+         this._addNewPost(action);
+      } else if (action.type === "DIALOGS-SEARCH") {
+         this._dialogsSearch(action);
+      } else if (action.type === "CHANGE-DIALOGS-SEARCH-TEXT") {
+         this._changeDialogsSearchText(action);
+      } else if (action.type === "CHANGE-DIALOG-TEXT") {
+         this._changeDialogText(action);
       }
    }
-
 }
 
 let store = new Store(stateObj);
 
-export const addPostActionCreator = () => (
+export const addNewPostActionCreator = () => (
    {
-      type: "ADD-POST",
+      type: "ADD-NEW-POST",
    }
 )
 
-export const changeInputTextActionCreator = (text) => (
+export const changeNewPostTextActionCreator = (text) => (
    {
-      type: "CHANGE-INPUT-TEXT",
+      type: "CHANGE-NEW-POST-TEXT",
       currentText: text,
+   }
+)
+
+export const dialogsSearchActionCreator = () => (
+   {
+      type: "DIALOGS-SEARCH",
+   }
+)
+
+export const changeDialogsSearchTextActionCreator = (text) => (
+   {
+      type: "CHANGE-DIALOGS-SEARCH-TEXT",
+      text: text,
+   }
+)
+
+export const changeDialogTextActionCreator = (text) => (
+   {
+      type: "CHANGE-DIALOG-TEXT",
+      text: text,
    }
 )
 

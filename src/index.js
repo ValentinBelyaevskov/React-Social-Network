@@ -1,7 +1,6 @@
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { store, appState } from './redux/store';
-// import renderEntireTree from './lib/renderEntireTree';
 
 // ! При вызове import, файл инициализируется
 
@@ -25,8 +24,8 @@ const renderEntireTree = ({ store, appState }) => {
    );
 }
 
-renderEntireTree({ store, appState });
-
 store.subscribe(() => renderEntireTree({ store, appState }));
+
+renderEntireTree({ store, appState });
 
 reportWebVitals();

@@ -18,11 +18,7 @@
 
 @media (max-width: 960px) {
    .sidebars {
-      grid-template-columns: 19.5rem 550px minmax(8rem, auto);
-   }
-
-   .controlsList {
-      margin-left: 4.3rem;
+      grid-template-columns: 18rem 550px minmax(6.5rem, auto);
    }
 
    .actual {

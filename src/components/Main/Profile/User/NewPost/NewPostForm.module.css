@@ -1,25 +1,35 @@
 .form {
    display: grid;
-   grid-template-columns: 4.2rem 34.9rem 11.9rem;
-   grid-template-rows: 4.2rem 4.3rem;
+   grid-template-columns: 4.5rem 34.4rem 11.9rem;
+   grid-template-areas: "avatar input button";
 
-   grid-template-areas: "avatar  input button"
-                        "padding1 icons padding2";
-
-   height: 100%;
+   min-height: 6.1rem;
+   margin-bottom: 2.7rem;
 }
 
 .newPostFormAvatar {
    grid-area: avatar;
 }
 
-.input {
-   grid-area: input;
+/* .textarea {
+   font-size: var(--main-fz);
 
-   font-size: 1.4rem;
-   font-weight: 400;
-   color: var(--base-fontColor);
+   padding: 1.5rem 4rem 1.5rem 2rem;
+   height: 4.5rem;
+   width: 90%;
+
+   resize: none;
+   
+   display: inline-block;
 }
+
+.textarea::placeholder {
+   color: var(--input-plch-fontColor);
+}
+
+.textarea:focus::placeholder {
+   color: var(--input-plch-focus-fontColor);
+} */
 
 .button {
    height: 3.7rem;
@@ -45,13 +55,7 @@
    filter: drop-shadow(0px 2px 5px var(--theme-hover-shadow));
 }
 
-/* .button:active {
-   background-color: var(--);
-   filter: drop-shadow(0px 2px 5px var(--theme-hover-shadow));
-} */
-
 .icons {
-   grid-area: icons;
    display: grid;
    grid-template-columns: repeat(4, 3.4rem);
    padding-left: 2rem;

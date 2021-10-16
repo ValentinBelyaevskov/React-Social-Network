@@ -1,11 +1,13 @@
 .headerSearch {
    justify-self: start;
 
+   width: 100%;
+
    grid-column: 2 / 3;
 
    height: 2.8rem;
 
-   margin-left: 2rem;
+   padding: 0 2rem;
 }
 
 .searchImage {
@@ -15,16 +17,16 @@
 .searchForm {
    height: 100%;
    display: grid;
-   grid-template-columns: 1fr minmax(50px, auto);
+   grid-template-columns: minmax(16px, max-content) auto;
    align-items: center;
    justify-items: end;
 }
 
 .searchImage img {
-   transition: ease 0.2s opacity;
+   transition: ease 0.1s opacity;
 }
 
 .searchImage img:hover {
    cursor: pointer;
-   opacity: 0.7;
+   opacity: 0.56;
 }

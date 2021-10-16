@@ -7,13 +7,9 @@
       "avatar message message";
    align-items: center;
 
-   padding: 0.8rem 2rem;
+   padding: 1rem 2rem;
 
    background-color: var(--message-color);
-}
-
-.dialogsItem:first-child {
-   padding-top: 1.6rem;
 }
 
 .dialogsItem:last-child {
@@ -47,11 +43,11 @@
 
    justify-self: start;
 
-   font-size: var(--secondary-fz);
+   font-size: var(--main-fz);
    color: var(--base-fontColor);
    font-weight: 400;
 
-   opacity: 0.56;
+   opacity: 0.7;
 }
 
 .messageDate {

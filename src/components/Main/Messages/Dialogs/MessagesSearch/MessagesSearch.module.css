@@ -24,10 +24,6 @@
    height: 4.5rem;
 }
 
-.messagesForm input {
-   margin-left: 0.7rem;
-}
-
 .searchIcon {
    transition: ease 0.1s opacity;
 }

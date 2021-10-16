@@ -1,0 +1,13 @@
+.textarea {
+   font-size: var(--main-fz);
+
+   /* margin-right: 2rem; */
+
+   padding: 1.5rem 4rem 1.5rem 2rem;
+   height: 4.5rem;
+   width: 90%;
+
+   resize: none;
+   
+   display: inline-block;
+}

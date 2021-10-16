@@ -9,10 +9,10 @@ const Sidebars = ({state, appState}) => (
    <div className={`${s.sidebars} ${adaptive.sidebars} sidebars`}>
       <Controls appState={appState.controls}/>
       <Switch>
-         <Route exact path="/Messages">
+         <Route path="/Messages">
             <FriendsOnline state={state.friends}/>
          </Route>
-         <Route exact path="/">
+         <Route exact path="/Profile">
             <WhatToFollow state={state.whatToFollow} appState={appState.whatToFollow}/>
          </Route>
       </Switch>

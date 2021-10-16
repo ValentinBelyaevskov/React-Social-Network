@@ -1,5 +1,5 @@
-const getValueWithoutMeasurer = (value) => (
-   value.split("").slice(0, -2).join("")
+const getValueWithoutMeasurer = (value, measurerLength) => (
+   value.split("").slice(0, -measurerLength).join("")
 );
 
 export default getValueWithoutMeasurer;

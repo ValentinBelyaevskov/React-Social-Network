@@ -62,6 +62,17 @@ const appData = {
             searchIcon: "./icons/messageLoupe.svg",
          }
       },
+
+
+      chat: {
+         icons: {
+            arrow: "./icons/arrow.svg",
+            attachments: "./icons/attachments.svg",
+            sendArrow: "./icons/sendArrow.svg",
+            other: "./icons/other.svg",
+            emoji: "./icons/emoji.svg"
+         }
+      },
    },
 
 
