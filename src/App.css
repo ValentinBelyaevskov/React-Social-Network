@@ -99,7 +99,7 @@ body {
   z-index: 2;
 }
 
-.chat-header {
+.chat__header {
   position: fixed;
   z-index: 2;
 }
@@ -234,14 +234,33 @@ body {
 .main .messages__person-avatar img {
   border-radius: 50%;
 }
-.main .chat-header .interlocutor-avatar {
+.main .chat__header .interlocutor-avatar {
   position: relative;
   display: inline-block;
   height: 0;
   width: 3rem;
   padding: 0 0 3rem 0;
 }
-.main .chat-header .interlocutor-avatar img {
+.main .chat__header .interlocutor-avatar img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+.main .chat__person-avatar {
+  position: relative;
+  display: inline-block;
+  height: 0;
+  width: 4rem;
+  padding: 0 0 4rem 0;
+}
+.main .chat__person-avatar img {
   position: absolute;
   left: 0;
   top: 0;

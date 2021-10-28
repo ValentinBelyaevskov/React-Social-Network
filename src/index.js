@@ -12,7 +12,7 @@ import App from './App';
 const renderEntireTree = ({ store, appState }) => {
    ReactDOM.render(
       <React.StrictMode>
-         <Router>
+         <Router basename="/repo-name">
             <App
                state={store.state}
                dispatch={(action) => store.dispatch(action)}

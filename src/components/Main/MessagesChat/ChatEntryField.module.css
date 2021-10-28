@@ -6,7 +6,7 @@
 
    width: 548px;
 
-   grid-template-columns: 6rem minmax(30rem, 1fr) 6rem 4rem;
+   grid-template-columns: 6rem minmax(30rem, 1fr) 4rem 5.25rem;
    grid-template-rows: minmax(4.5rem, max-content) minmax(max-content, 3rem);
    align-items: start;
    justify-items: center;
@@ -20,6 +20,7 @@
 
 .entryFieldButton:last-of-type {
    justify-self: start;
+   margin-left: 0.5rem;
 }
 
 .entryFieldButton {
@@ -38,14 +39,15 @@
 
 .attachments,
 .emoji,
-.sendArrow {
+.entryFieldButton:last-of-type {
    transition: ease 0.1s opacity;
-   margin-top: 1.25rem;
+   margin-top: 0.5rem;
+   padding: 0.75rem;
 }
 
 .attachments:hover,
 .emoji:hover,
-.sendArrow:hover {
+.entryFieldButton:last-of-type:hover {
    cursor: pointer;
    opacity: 0.56;
 }

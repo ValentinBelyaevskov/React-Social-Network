@@ -11,26 +11,6 @@
    grid-area: avatar;
 }
 
-/* .textarea {
-   font-size: var(--main-fz);
-
-   padding: 1.5rem 4rem 1.5rem 2rem;
-   height: 4.5rem;
-   width: 90%;
-
-   resize: none;
-   
-   display: inline-block;
-}
-
-.textarea::placeholder {
-   color: var(--input-plch-fontColor);
-}
-
-.textarea:focus::placeholder {
-   color: var(--input-plch-focus-fontColor);
-} */
-
 .button {
    height: 3.7rem;
    border-radius: 1rem;
@@ -58,18 +38,10 @@
 .icons {
    display: grid;
    grid-template-columns: repeat(4, 3.4rem);
-   padding-left: 2rem;
+   margin-left: 1.1rem;
+   justify-items: center;
 }
 
 .icons:hover {
    cursor: pointer;
-}
-
-.iconsItem {
-   transition-property: opacity;
-   transition-duration: 0.1s;
-}
-
-.iconsItem:hover {
-   opacity: 0.6;
 }

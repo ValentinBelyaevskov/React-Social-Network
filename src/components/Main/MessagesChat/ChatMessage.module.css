@@ -1,0 +1,45 @@
+.chatMessage {
+   display: grid;
+   align-items: center;
+   grid-template-columns: 4rem minmax(9rem, max-content) minmax(30rem, 1fr);
+   grid-template-rows: 2rem minmax(2rem, max-content);
+   grid-template-areas: "avatar name date"
+                        "avatar text text";
+   margin: 3rem 0;
+}
+
+.avatar {
+   grid-area: avatar;
+}
+
+.start {
+   
+}
+
+.name {
+   grid-area: name;
+   padding: 0 1.5rem 0 1.2rem;
+   font-size: var(--main-fz);
+   font-weight: 500;
+   color: var(--theme-color);
+}
+
+.date {
+   grid-area: date;
+   font-size: 1.1rem;
+   color: var(--base-fontColor);
+   font-weight: 400;
+   opacity: 0.56;
+}
+
+.date,
+.name {
+   align-self: end;
+   line-height: 1;
+   margin-bottom: 0.35rem;
+}
+
+.text {
+   grid-area: text;
+   padding-left: 1.2rem;
+}

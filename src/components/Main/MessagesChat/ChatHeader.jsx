@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom"
 import s from "./ChatHeader.module.css"
 
 const ChatHeader = ({ state, appState, dispatch }) => (
-   <div className={`${s.header} chat-header`}>
+   <div className={`${s.header} chat__header`}>
       <NavLink className={s.navLink} to="/Messages">
          <button className={s.backButton}>
             <img className={s.backArrow} src={appState.icons.arrow} alt="back" />

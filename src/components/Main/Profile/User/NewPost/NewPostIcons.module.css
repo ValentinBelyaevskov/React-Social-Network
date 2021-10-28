@@ -1,0 +1,12 @@
+.iconsItem {
+   width: 100%;
+
+   text-align: center;
+
+   transition-property: opacity;
+   transition-duration: 0.1s;
+}
+
+.iconsItem:hover {
+   opacity: 0.56;
+}

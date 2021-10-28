@@ -6,7 +6,7 @@
    background-color: var(--main-color);
 
    display: grid;
-   grid-template-columns: 7rem minmax(30rem, 1fr) 5rem 4rem;
+   grid-template-columns: 6.5rem minmax(30rem, 1fr) 5rem 4rem;
    align-items: center;
 }
 
@@ -15,15 +15,13 @@
    align-items: center;
    justify-content: space-between;
 
-   width: 5rem;
+   width: 4.5rem;
 
    margin-right: 0;
    
    background-color: var(--main-color);
    color: #959595;
-   
-   /* font-size: var(--interface-fz); */
-   font-size: 1.4rem;
+   font-size: var(--main-fz);
    
    transition: ease 0.1s opacity;
 }
@@ -41,7 +39,15 @@
 }
 
 .interlocutorName {
+   padding: 0.5rem;
+
+   font-size: var(--main-fz);
+
    justify-self: center;
+}
+
+.interlocutorName:hover {
+   cursor: pointer;
 }
 
 .interlocutorAvatar,

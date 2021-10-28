@@ -1,23 +1,39 @@
 import s from "./ChatFolder.module.css"
+import ChatMessage from "./ChatMessage"
 
-const ChatFolder = ({ state, appState, dispatch }) => (
-   <div className={s.chatFolder}>
-      <div className={s.messages}>
+const ChatFolder = ({ state, appState, dispatch }) => {
+   let interlocutor = state.friends[0];
+   let dialog = state.messages.dialogs[interlocutor.name];
+   let user = state.profile.user;
 
-         {/* <div className={s.you} className={s.messagesItem}>
-            At vero eos et accusamus et iusto odio dignissimos
-         </div>
-         <div className={s.friend} className={s.messagesItem}>
-            Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio
-         </div>
-         <div className={s.you} className={s.messagesItem}>
-            On the other hand, we denounce with
-         </div>
-         <div className={s.friend} className={s.messagesItem}>
-            But I must explain to you how all this mistaken idea
-         </div> */}
+   console.log(dialog)
+
+   return (
+      <div className={s.chatFolder}>
+         <ChatMessage
+            key={0}
+            className="start"
+            interlocutor={interlocutor}
+            user={user}
+            dialog={dialog[0]}
+         />
+         {dialog.map(
+            (item, i) => {
+               if (i > 0) {
+                  return (
+                     <ChatMessage
+                        key={i}
+                        className={dialog[i - 1].person === dialog[i].person ? "continuation" : "start"}
+                        interlocutor={interlocutor}
+                        user={user}
+                        dialog={item}
+                     />
+                  )
+               }
+            }
+         )}
       </div>
-   </div>
-)
+   )
+}
 
 export default ChatFolder

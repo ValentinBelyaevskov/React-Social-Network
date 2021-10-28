@@ -2,8 +2,8 @@ import React from "react";
 import { addNewPostActionCreator, changeNewPostTextActionCreator } from "../../../../../redux/store";
 import Textarea from "../../../../generic/Textarea";
 import s from "./NewPostForm.module.css";
+import NewPostIcons from "./NewPostIcons";
 
-// const NewPostForm = ({ state, appState, dispatch }) => {
 class NewPostForm extends React.Component {
 
    constructor(props) {
@@ -59,9 +59,7 @@ class NewPostForm extends React.Component {
                <div className={s.icons}>
                   {this.props.appState.icons.map(
                      (item, i) => (
-                        <div key={i} className={s.iconsItem}>
-                           <img key={i} src={item} alt="New post icon" />
-                        </div>
+                        <NewPostIcons key={i} number={i} image={item} />
                      )
                   )}
                </div>

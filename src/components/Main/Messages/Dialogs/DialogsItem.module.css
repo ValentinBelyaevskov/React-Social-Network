@@ -51,8 +51,6 @@
 }
 
 .messageDate {
-   margin-right: 1rem;
-
    grid-area: date;
 
    justify-self: end;

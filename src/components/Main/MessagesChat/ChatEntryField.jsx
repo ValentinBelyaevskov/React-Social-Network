@@ -28,7 +28,6 @@ const ChatEntryField = ({ state, appState, dispatch }) => (
                },
                changeWindowSize: (elem) => {
                   if (elem.scrollHeight < 165) {
-                     console.log(elem.scrollHeight, state.messages.dialogText.length)
                      elem.style.height = "0px";
                      elem.style.height = `${elem.scrollHeight}px`;
                      elem.style.overflow = "hidden"
