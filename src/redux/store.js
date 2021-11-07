@@ -1,114 +1,41 @@
-import appData from "./appData/appData";
-import friends from "./usersData/friends";
-import messages from "./usersData/messages";
-import profile from "./usersData/profile";
-import whatToFollow from "./usersData/whatToFollow";
-
+import appData from "./data/appData";
 const appState = appData;
-const stateObj = { friends, messages, profile, whatToFollow };
+// import appData from "./appData/appData";
+// import friends from "./usersData/friends";
+// import messages from "./usersData/messages";
+// import profile from "./usersData/profile";
+// import whatToFollow from "./usersData/whatToFollow";
+// import header from "./usersData/header";
+// import headerReducer from "./reducers/headerReducer";
+// import profileReducer from "./reducers/profileReducer";
+// import createObservable from "../lib/createObservable";
+// import messagesReducer from "./reducers/messagesReducer";
 
-class Store {
+// const appState = appData;
+// const stateObj = { friends, messages, profile, whatToFollow, header };
 
-   constructor(stateObj) {
-      this.state = stateObj;
-   }
+// class Store {
+//    constructor(stateObj) {
+//       this.state = stateObj;
+//       this.inputObservationObject = createObservable();
+//    }
 
-   _subscriber() {
-      console.log(this);
-   }
+//    dispatch(action) {
+//       // * dialog
+//       this.state.messages = messagesReducer(this.state.messages, action);
 
-   subscribe(observer) {
-      this._subscriber = observer;
-   }
+//       // * profile
+//       this.state.profile = profileReducer(this.state.profile, action);
 
+//       // * header
+//       this.state.header = headerReducer(this.state.header, action);
 
-   _changeNewPostText(action) {
-      this.state.profile.newPost.text = action.currentText;
-      this._subscriber();
-   }
+//       this.inputObservationObject.fire();
+//    }
+// }
 
-   _addNewPost(action) {
-      let mounths = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
-      let civilDate = {
-         year: new Date().getFullYear(),
-         mounth: mounths[new Date().getMonth()],
-         day: new Date().getDate(),
-         hours: new Date().getHours() > 9 ? new Date().getHours() : `0${new Date().getHours()}`,
-         minutes: new Date().getMinutes() > 9 ? new Date().getMinutes() : `0${new Date().getMinutes()}`,
-      };
+// let store = new Store(stateObj);
 
-      let newPostObj = {
-         ...this.state.profile.newPost,
-         date: `${civilDate.mounth} ${civilDate.day} ` + `at ${civilDate.hours}:${civilDate.minutes}`,
-      };
+// export { appState, store }
 
-      this.state.profile.posts.unshift(newPostObj);
-
-      this._subscriber();
-   }
-
-   _dialogsSearch(action) {
-      alert(this.state.messages.search);
-   }
-
-   _changeDialogsSearchText(action) {
-      this.state.messages.search = action.text;
-      this._subscriber();
-   }
-
-   _changeDialogText(action) {
-      this.state.messages.dialogText = action.text;
-      this._subscriber();
-   }
-
-   dispatch(action) {
-      if (action.type === "CHANGE-NEW-POST-TEXT") {
-         this._changeNewPostText(action);
-      } else if (action.type === "ADD-NEW-POST") {
-         this._addNewPost(action);
-      } else if (action.type === "DIALOGS-SEARCH") {
-         this._dialogsSearch(action);
-      } else if (action.type === "CHANGE-DIALOGS-SEARCH-TEXT") {
-         this._changeDialogsSearchText(action);
-      } else if (action.type === "CHANGE-DIALOG-TEXT") {
-         this._changeDialogText(action);
-      }
-   }
-}
-
-let store = new Store(stateObj);
-
-export const addNewPostActionCreator = () => (
-   {
-      type: "ADD-NEW-POST",
-   }
-)
-
-export const changeNewPostTextActionCreator = (text) => (
-   {
-      type: "CHANGE-NEW-POST-TEXT",
-      currentText: text,
-   }
-)
-
-export const dialogsSearchActionCreator = () => (
-   {
-      type: "DIALOGS-SEARCH",
-   }
-)
-
-export const changeDialogsSearchTextActionCreator = (text) => (
-   {
-      type: "CHANGE-DIALOGS-SEARCH-TEXT",
-      text: text,
-   }
-)
-
-export const changeDialogTextActionCreator = (text) => (
-   {
-      type: "CHANGE-DIALOG-TEXT",
-      text: text,
-   }
-)
-
-export { appState, store }
+export { appState }

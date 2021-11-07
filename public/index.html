@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <!-- Установка базового адреса для ссылок с относительными адресами -->
-  <base href="/">
+  <!-- ! <base href="React-social-network"> -->
+  <!-- <base href="/"> -->
+  <base href="React-social-network">
 <head>
   <meta charset="utf-8" />
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -9,7 +11,7 @@
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="Web site created using create-react-app" />
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-  <!--
+<!--   
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
@@ -30,11 +32,16 @@
   <title>React App</title>
 </head>
 
-<!-- "start": "cross-env BROWSER=chrome react-scripts start", -->
+<!-- ! JSON gh-pages -->
+<!-- "homepage": "https://valentinbelyaevskov.github.io/React-social-network/", -->
+<!-- "start": "webpack-dev-server --host 0.0.0.0 --disable-host-check --open-page React-social-network" -->
 
+<!-- "cross-env BROWSER=chrome react-scripts start" -->
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
+
+  <!-- ! gh-pages -->
   <script type="text/javascript">
     // Single Page Apps for GitHub Pages
     // MIT License
@@ -57,6 +64,7 @@
       }
     }(window.location))
   </script>
+
   <div id="root"></div>
   <!--
       This HTML file is a template.
@@ -68,7 +76,7 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <script src="/React-social-network/build/bundle.js"></script>
+    <!-- <script src="/React-social-network/build/bundle.js"></script> -->
 </body>
 
 </html>

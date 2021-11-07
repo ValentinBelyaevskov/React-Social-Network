@@ -1,19 +1,19 @@
 import { Route, Switch, } from 'react-router'
-import Controls from './Controls/Controls'
-import FriendsOnline from './FriendsOnline/FriendsOnline'
+import ControlsContainer from './Controls/ControlsContainer'
+import FriendsOnlineContainer from './FriendsOnline/FriendsOnlineContainer'
 import s from './Sidebars.module.css'
 import adaptive from './SidebarsAdaptive.module.css'
 import WhatToFollow from './WhatToFollow/WhatToFollow'
 
-const Sidebars = ({state, appState}) => (
+const Sidebars = () => (
    <div className={`${s.sidebars} ${adaptive.sidebars} sidebars`}>
-      <Controls appState={appState.controls}/>
+      <ControlsContainer/>
       <Switch>
          <Route path="/Messages">
-            <FriendsOnline state={state.friends}/>
+            <FriendsOnlineContainer/>
          </Route>
          <Route exact path="/Profile">
-            <WhatToFollow state={state.whatToFollow} appState={appState.whatToFollow}/>
+            <WhatToFollow/>
          </Route>
       </Switch>
    </div>

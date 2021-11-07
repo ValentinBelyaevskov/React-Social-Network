@@ -9,7 +9,7 @@ const Input = ({inputState}) => {
          type="text"
          placeholder={inputState.placeholder}
          ref={inputState.refContent}
-         onInput={inputState.onInputHadler}
+         onInput={inputState.onInputHandler}
       />
    )
 }

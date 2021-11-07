@@ -1,13 +1,13 @@
-import UserAvatar from "./UserAvatar/UserAvatar"
-import UserData from "./UserData/UserData"
 import s from './User.module.css'
 import NewPost from "./NewPost/NewPost"
+import UserAvatarContainer from "./UserAvatar/UserAvatarContainer"
+import UserDataContainer from "./UserData/UserDataContainer"
 
-const User = ({state, appState, dispatch}) => (
+const User = () => (
    <div className={s.user}>
-      <UserAvatar image={state.user.avatar} />
-      <UserData state={state.user} appState={appState.userData}/>
-      <NewPost state={state} dispatch={dispatch} appState={appState.newPost}/>
+      <UserAvatarContainer/>
+      <UserDataContainer/>
+      <NewPost/>
    </div>
 )
 

@@ -1,5 +1,4 @@
 import React from 'react'
-import callSetClassForHoverEv from '../../../lib/callSetClassForHoverEv';
 import s from './FriendsOnline.module.css'
 import adaptive from '../SidebarsAdaptive.module.css';
 import FriendsOnlineItem from './FriendsOnlineItem'
@@ -10,7 +9,7 @@ class FriendsOnline extends React.Component {
    }
 
    componentDidMount() {
-      callSetClassForHoverEv("Messages", "friends-online__person-avatar--active", "friends-online__person-avatar", "friends-online__item")
+      this.props.setHoverClass()
    }
 
    render () {

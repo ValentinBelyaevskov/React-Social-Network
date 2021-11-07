@@ -1,11 +1,11 @@
-import Actual from './Actual'
+import ActualContainer from './ActualContainer'
 import s from './WhatToFollow.module.css'
-import WhoToFollow from './WhoToFollow'
+import WhoToFollowContainer from './WhoToFollowContainer'
 
-const WhatToFollow = ({state, appState}) => (
+const WhatToFollow = () => (
    <div className={`${s.whatToFollow} what-to-follow`}>
-      <Actual state={state.actual} appState={appState}/>
-      <WhoToFollow state={state.whoToFollow} appState={appState}/>
+      <ActualContainer/>
+      <WhoToFollowContainer/>
    </div>
 )
 

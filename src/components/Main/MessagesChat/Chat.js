@@ -1,14 +1,13 @@
-
 import s from "./Chat.module.css";
-import ChatEntryField from "./ChatEntryField";
-import ChatFolder from "./ChatFolder";
-import ChatHeader from "./ChatHeader";
+import ChatEntryFieldContainer from "./ChatEntryFieldContainer";
+import ChatFolderContainer from "./ChatFolderContainer";
+import ChatHeaderContainer from "./ChatHeaderContainer";
 
-const Chat = ({ state, appState, dispatch }) => (
+const Chat = () => (
    <div className={`${s.chat} chat`}>
-      <ChatHeader state={state} appState={appState} dispatch={dispatch}/>
-      <ChatFolder state={state} appState={appState} dispatch={dispatch}/>
-      <ChatEntryField state={state} appState={appState} dispatch={dispatch}/>
+      <ChatHeaderContainer/>
+      <ChatFolderContainer/>
+      <ChatEntryFieldContainer/>
    </div>
 )
 

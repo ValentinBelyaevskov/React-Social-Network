@@ -1,24 +1,37 @@
 import s from "./Dialogs.module.css"
 import DialogsItem from "./DialogsItem"
-import messageShrink from "../../../../lib/messageShrink"
+import SendFirstMessage from "./SendFirstMessage";
 
-const Dialogs = ({ state }) => (
-   <div className={s.dialogs}>
-      {state.friends.map((item, i) => (
-         <DialogsItem
-            key={i}
-            content={
-               {
-                  dialogNumber: i,
-                  image: item.avatar,
-                  name: item.name,
-                  message: messageShrink(state.messages.dialogs[item.name][0].message),
-                  date: messageShrink(state.messages.dialogs[item.name][0].date),
-               }
-            }
-         />)
-      )}
-   </div>
-)
+const Dialogs = ({ dialogs, friends, functions }) => {
+
+   if (!dialogs.length) return (
+      <SendFirstMessage/>
+   )
+
+   return (
+      <div className={s.dialogs}>
+         {dialogs.slice(0).reverse().map((dialogsItem, i) => {
+            const friend = friends.find((friendsItem) => friendsItem.name == dialogsItem.name);
+            const dateStr = dialogsItem.messages[dialogsItem.messages.length - 1].date
+
+            return (
+               <DialogsItem
+                  key={i}
+                  content={
+                     {
+                        dialogNumber: i,
+                        image: friend.avatar,
+                        name: friend.name,
+                        message: functions.messageShrink(dialogsItem.messages[0].messageText),
+                        date: functions.getFormattedDate(dateStr, "dialog"),
+                     }
+                  }
+               />
+            )
+         })
+         }
+      </div>
+   )
+}
 
 export default Dialogs

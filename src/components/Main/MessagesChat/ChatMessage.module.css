@@ -1,19 +1,15 @@
-.chatMessage {
+.startMessage {
    display: grid;
    align-items: center;
    grid-template-columns: 4rem minmax(9rem, max-content) minmax(30rem, 1fr);
    grid-template-rows: 2rem minmax(2rem, max-content);
    grid-template-areas: "avatar name date"
                         "avatar text text";
-   margin: 3rem 0;
+   margin: 2rem 0 1.5rem 0;
 }
 
 .avatar {
    grid-area: avatar;
-}
-
-.start {
-   
 }
 
 .name {
@@ -41,5 +37,13 @@
 
 .text {
    grid-area: text;
-   padding-left: 1.2rem;
+   padding: 0 2.5rem 0 1.2rem;
+}
+
+.continuation {
+   margin: 1.5rem 0 1.5rem ;
+}
+
+.continuation .text {
+   padding: 0 2.5rem 0 5.2rem;
 }

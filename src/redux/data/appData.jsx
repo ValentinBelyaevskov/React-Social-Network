@@ -5,6 +5,7 @@ const appData = {
          logo: "",
          searchInputText: "Search",
          searchLogo: "./icons/loupe.svg",
+         text: "",
       }
    },
 

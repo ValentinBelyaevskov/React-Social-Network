@@ -10,21 +10,19 @@ class Actual extends React.Component {
    }
 
    componentDidMount () {
-      callSetClassForHoverEv("Profile", "actual__trend--active", "actual__trend", "actual__item")
+      this.props.setHoverClass()
    }
 
    render() {
       return (
          <section className={`${s.actual} ${adaptive.actual} actual`}>
-            <h3 className={s.title}>{this.props.appState.tags}</h3>
-            {this.props.state.map((item, i) => (
+            <h3 className={s.title}>{this.props.title}</h3>
+            {this.props.actualItems.map((item, i) => (
                <ActualItem key={i} place={item.place} trend={item.trend} value={item.value} />
             ))}
          </section>
       )
    }
 }
-
-// callSetClassForHoverEv("Profile", "actual__trend--active", "actual__trend", "actual__item");
 
 export default Actual

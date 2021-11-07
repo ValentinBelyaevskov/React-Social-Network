@@ -1,28 +1,25 @@
-import PostItem from "./PostItem/PostItem"
+import PostItemContainer from "./PostItem/PostItemContainer"
 
-const Posts = ({ state, appState }) => (
-   <div>
-      {state.posts.map(
-         (item, i) => (
-            <PostItem
-               state={state}
-               appState={appState}
+const Posts = (props) => {
 
-               key={i}
+   console.log(props.posts.slice(0).reverse())
 
-               content={
-                  {
-                     image: item.images,
-                     date: item.date,
-                     text: item.text,
-                     number: i,
-                  }
-               }
-
-            />)
-      )
-      }
-   </div>
-)
+   return (
+      <div>
+         {props.posts.slice(0).reverse().map(
+            (item, i) => (
+               <PostItemContainer
+                  content={props.content}
+                  post={item}
+                  UI={props.UI}
+                  key={i}
+                  number={i}
+               />
+            )
+         )
+         }
+      </div>
+   )
+}
 
 export default Posts

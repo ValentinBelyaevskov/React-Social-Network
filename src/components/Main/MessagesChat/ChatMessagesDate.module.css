@@ -1,0 +1,6 @@
+.date {
+   text-align: center;
+   color: #959595;
+   font-size: var(--main-fz);
+   margin-top: 2rem;
+}

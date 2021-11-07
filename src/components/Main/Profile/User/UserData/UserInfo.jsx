@@ -1,9 +1,9 @@
 import UserInfoItem from "./UserInfoItem"
 
-const UserInfo = ({state, appState}) => {
+const UserInfo = ({state, UI}) => {
    return (
       <div className="user__info">
-         {appState.map(
+         {UI.map(
             (property, i) => (
                <UserInfoItem key={i} property={property} value={state[property]}/>
             )

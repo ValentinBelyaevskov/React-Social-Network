@@ -6,21 +6,24 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import ErrorNotFound from './Error/ErrorNotFound';
 import Chat from './MessagesChat/Chat';
 
-const Main = ({state, appState, dispatch}) => (
+const Main = () => (
    <main className={`${s.main} ${adaptive.main} main`}>
       <Switch>
-         <Route exact path="/Messages">
-            <Messages dispatch={dispatch} state={state} appState={appState.messages}/>
-         </Route>
          <Route exact path="/Profile">
-            <Profile state={state.profile} dispatch={dispatch} appState={appState.profile}/>
+         {/* // ! */}
+            <Profile/>
+         </Route>
+         <Route exact path="/Messages">
+            <Messages/>
          </Route>
          <Route path="/Messages/0">
-            <Chat dispatch={dispatch} state={state} appState={appState.chat}/>
+            <Chat/>
          </Route>
+
          <Route exact path="/">
             <Redirect to="/Profile"/>
          </Route>
+
          <Route>
             <ErrorNotFound />
          </Route>

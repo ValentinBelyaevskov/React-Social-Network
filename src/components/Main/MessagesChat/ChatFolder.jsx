@@ -1,39 +1,67 @@
+import React from "react";
 import s from "./ChatFolder.module.css"
-import ChatMessage from "./ChatMessage"
+import chatFolderScroll from "./chatFolderScroll";
+import ChatMessagesDate from "./ChatMessagesDate";
+import SendFirstMessage from "./SendFirstMessage";
 
-const ChatFolder = ({ state, appState, dispatch }) => {
-   let interlocutor = state.friends[0];
-   let dialog = state.messages.dialogs[interlocutor.name];
-   let user = state.profile.user;
+class ChatFolder extends React.Component {
+   constructor(props) {
+      super(props);
+   }
 
-   console.log(dialog)
+   componentDidMount() {
+      chatFolderScroll();
+   }
 
-   return (
-      <div className={s.chatFolder}>
-         <ChatMessage
-            key={0}
-            className="start"
-            interlocutor={interlocutor}
-            user={user}
-            dialog={dialog[0]}
-         />
-         {dialog.map(
-            (item, i) => {
-               if (i > 0) {
-                  return (
-                     <ChatMessage
-                        key={i}
-                        className={dialog[i - 1].person === dialog[i].person ? "continuation" : "start"}
-                        interlocutor={interlocutor}
-                        user={user}
-                        dialog={item}
-                     />
-                  )
+   render() {
+      if (!this.props.messagesArr.length) return (
+         <SendFirstMessage />
+      )
+
+      return (
+         <div className={`${s.chatFolder} chat-folder`}>
+
+            <ChatMessagesDate date={this.props.firstMessageDate} />
+            {this.props.getChatMessage(0, this.props.messageState)}
+
+            {this.props.messagesArr.slice(1).map(
+               (item, i, arr) => {
+                  const date = this.props.getFormattedDate(item.date, "message").date;
+                  const previousDate = this.props.getFormattedDate(this.props.messagesArr[(i + 1) - 1].date, "message").date;
+                  const timeDifferent = new Date(item.date).getTime() - new Date(this.props.messagesArr[(i + 1) - 1].date).getTime()
+                  const messageClassName = this.props.messagesArr[(i + 1) - 1].person === this.props.messagesArr[(i + 1)].person ? "continuation" : "start"
+                  const messagesDate = date !== previousDate ? date : false;
+                  const lastMessage = i === (arr.length - 1) ? true : false;
+                  const messageState = {
+                     ...this.props.messageState,
+                     className: messageClassName,
+                     messagesItem: item,
+                     firstMessageOfTheDay: messagesDate ? true : false,
+                     timeDifferent: timeDifferent,
+                     lastMessage: lastMessage,
+                  }
+
+                  if (messagesDate) {
+                     return (
+                        <div>
+                           <ChatMessagesDate date={messagesDate} />
+                           {this.props.getChatMessage(i + 1, messageState)}
+                        </div>
+                     )
+                  }
+                  else {
+                     return (
+                        <div>
+                           {this.props.getChatMessage(i + 1, messageState)}
+                        </div>
+                     )
+                  }
                }
-            }
-         )}
-      </div>
-   )
+            )}
+
+         </div>
+      )
+   }
 }
 
 export default ChatFolder

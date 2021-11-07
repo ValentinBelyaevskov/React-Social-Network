@@ -1,7 +1,6 @@
 import s from './WhoToFollow.module.css'
 import WhoToFollowItem from './WhoToFollowItem'
 import adaptive from '../SidebarsAdaptive.module.css'
-import callSetClassForHoverEv from '../../../lib/callSetClassForHoverEv'
 import React from 'react'
 
 class WhoToFollow extends React.Component {
@@ -10,13 +9,13 @@ class WhoToFollow extends React.Component {
    }
 
    componentDidMount() {
-      callSetClassForHoverEv("Profile", "who-to-follow-item__avatar--active", "who-to-follow__avatar", "who-to-follow__item")
+      this.props.setHoverClass()
    }
 
    render() {
       return (
          <section className={`${s.whoToFollow} ${adaptive.whoToFollow} who-to-follow`}>
-            <h3 className={s.title}>{this.props.appState.groups}</h3>
+            <h3 className={s.title}>{this.props.UI.groups}</h3>
             {this.props.state.map((item, i) => (
                <WhoToFollowItem
                   key={i}
@@ -28,7 +27,7 @@ class WhoToFollow extends React.Component {
                         communityLogin: item.communityLogin,
                      }
                   }
-                  appState={this.props.appState}
+                  UI={this.props.UI}
                />
             ))}
             <div className={s.showMore}>Show more</div>

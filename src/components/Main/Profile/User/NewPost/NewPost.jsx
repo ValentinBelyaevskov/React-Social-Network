@@ -1,12 +1,11 @@
-import NewPostForm from "./NewPostForm"
 import s from "./NewPost.module.css"
+import NewPostFormContainer from "./NewPostFormContainer"
 
-const NewPost = ({state, appState, dispatch}) => {
-   // state._subscriber()
+const NewPost = ({store, state, appState, dispatch}) => {
    return (
       <section className={`${s.newPost} new-post`}>
          <h2 className={s.header}>New post</h2>
-         <NewPostForm dispatch={dispatch} state={state} appState={appState}/>
+         <NewPostFormContainer/>
       </section>
    )
 }

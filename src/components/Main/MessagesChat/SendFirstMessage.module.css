@@ -1,0 +1,8 @@
+.sendFirstMessage {
+   color: #959595;
+   font-size: var(--main-fz);
+
+   text-align: center;
+   margin-top: 8.5rem;
+   padding: 0 2rem;
+}
