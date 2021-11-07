@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/React-social-network/static/css/main.e708ff60.chunk.css",
-    "main.js": "/React-social-network/static/js/main.4abcd499.chunk.js",
-    "main.js.map": "/React-social-network/static/js/main.4abcd499.chunk.js.map",
-    "runtime-main.js": "/React-social-network/static/js/runtime-main.9a9c7440.js",
-    "runtime-main.js.map": "/React-social-network/static/js/runtime-main.9a9c7440.js.map",
-    "static/js/2.d3e9e04c.chunk.js": "/React-social-network/static/js/2.d3e9e04c.chunk.js",
-    "static/js/2.d3e9e04c.chunk.js.map": "/React-social-network/static/js/2.d3e9e04c.chunk.js.map",
-    "static/js/3.8d98cd8a.chunk.js": "/React-social-network/static/js/3.8d98cd8a.chunk.js",
-    "static/js/3.8d98cd8a.chunk.js.map": "/React-social-network/static/js/3.8d98cd8a.chunk.js.map",
+    "main.css": "/React-social-network/static/css/main.28c90222.chunk.css",
+    "main.js": "/React-social-network/static/js/main.08e84840.chunk.js",
+    "main.js.map": "/React-social-network/static/js/main.08e84840.chunk.js.map",
+    "runtime-main.js": "/React-social-network/static/js/runtime-main.84dcc0cb.js",
+    "runtime-main.js.map": "/React-social-network/static/js/runtime-main.84dcc0cb.js.map",
+    "static/js/2.4cb59efb.chunk.js": "/React-social-network/static/js/2.4cb59efb.chunk.js",
+    "static/js/2.4cb59efb.chunk.js.map": "/React-social-network/static/js/2.4cb59efb.chunk.js.map",
+    "static/js/3.56a8050f.chunk.js": "/React-social-network/static/js/3.56a8050f.chunk.js",
+    "static/js/3.56a8050f.chunk.js.map": "/React-social-network/static/js/3.56a8050f.chunk.js.map",
     "index.html": "/React-social-network/index.html",
-    "static/css/main.e708ff60.chunk.css.map": "/React-social-network/static/css/main.e708ff60.chunk.css.map",
-    "static/js/2.d3e9e04c.chunk.js.LICENSE.txt": "/React-social-network/static/js/2.d3e9e04c.chunk.js.LICENSE.txt"
+    "static/css/main.28c90222.chunk.css.map": "/React-social-network/static/css/main.28c90222.chunk.css.map",
+    "static/js/2.4cb59efb.chunk.js.LICENSE.txt": "/React-social-network/static/js/2.4cb59efb.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.9a9c7440.js",
-    "static/js/2.d3e9e04c.chunk.js",
-    "static/css/main.e708ff60.chunk.css",
-    "static/js/main.4abcd499.chunk.js"
+    "static/js/runtime-main.84dcc0cb.js",
+    "static/js/2.4cb59efb.chunk.js",
+    "static/css/main.28c90222.chunk.css",
+    "static/js/main.08e84840.chunk.js"
   ]
 }
