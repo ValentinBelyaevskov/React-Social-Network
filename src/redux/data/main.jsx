@@ -157,6 +157,13 @@ const main = {
          },
       ],
 
+      communities: [
+         {status: "Unfollow", avatar: "./images/nike.jpg", community: "Nike", communityLogin: "@Nike", check: "./icons/check.svg"},
+         {status: "Unfollow", avatar: "./images/netflix.jpg", community: "Netflix Russia", communityLogin: "@NetflixRU", check: "./icons/check.svg"},
+         {status: "Unfollow", avatar: "./images/salomon.jpg", community: "Salomon Freeski", communityLogin: "@Salomonfreeski", check: "./icons/check.svg"},
+         {status: "Unfollow", avatar: "./images/formula1.jpg", community: "Formula 1", communityLogin: "@F1", check: "./icons/check.svg"},
+      ],
+
       messenger: {
          search: "asd asdawdasas as a",
          dialogText: "ijokki u das dawjgk",

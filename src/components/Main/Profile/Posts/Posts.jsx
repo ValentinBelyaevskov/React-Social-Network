@@ -1,9 +1,6 @@
 import PostItemContainer from "./PostItem/PostItemContainer"
 
 const Posts = (props) => {
-
-   console.log(props.posts.slice(0).reverse())
-
    return (
       <div>
          {props.posts.slice(0).reverse().map(

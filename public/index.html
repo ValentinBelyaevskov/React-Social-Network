@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <!-- Установка базового адреса для ссылок с относительными адресами -->
+  <base href="/">
   <!-- ! <base href="React-social-network"> -->
-  <!-- <base href="/"> -->
-  <base href="React-social-network">
 <head>
   <meta charset="utf-8" />
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -35,14 +34,14 @@
 <!-- ! JSON gh-pages -->
 <!-- "homepage": "https://valentinbelyaevskov.github.io/React-social-network/", -->
 <!-- "start": "webpack-dev-server --host 0.0.0.0 --disable-host-check --open-page React-social-network" -->
-
+<!-- ! -->
 <!-- "cross-env BROWSER=chrome react-scripts start" -->
-
+<!-- ! -->
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
 
   <!-- ! gh-pages -->
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
     // Single Page Apps for GitHub Pages
     // MIT License
     // https://github.com/rafgraph/spa-github-pages
@@ -63,7 +62,8 @@
         );
       }
     }(window.location))
-  </script>
+  </script> -->
+  <!-- ! -->
 
   <div id="root"></div>
   <!--
@@ -80,3 +80,21 @@
 </body>
 
 </html>
+
+<!-- 
+  * gitHub-pages:
+
+  ? index.html:
+  1) У тега base установить href="React-social-network".
+  2) Подключить скрипт с функцией (function(l)...)
+
+  ? package.json:
+  1) "homepage": "https://valentinbelyaevskov.github.io/React-social-network/"
+  2) "start": "webpack-dev-server --host 0.0.0.0 --disable-host-check --open-page React-social-network"
+
+  ? index.js
+  1) У тега BrowserRouter basename="/React-social-network"
+
+  ? build
+  1) Добавить файл 404.html
+ -->

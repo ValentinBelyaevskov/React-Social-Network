@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import Input from '../../../../generic/Input';
-import s from './MessagesSearch.module.css'
+import s from './MessagesSearch.module.css';
 
 class MessagesSearch extends React.Component {
 
@@ -14,10 +14,11 @@ class MessagesSearch extends React.Component {
    }
 
    render() {
+      // console.log('Render: "MessagesSearch"');
       return (<div className={`${s.messagesSearch} message__search`}>
          <div className={`${s.messagesSearchWrapper} message__search-wrapper`}>
             <form className={s.messagesForm}>
-               <div onClick={this.props.searchClickListener}>
+               <div onClick={this.props.searchClickListener} className={`${s.messagesIcon}`}>
                   <img src={this.props.searchIcon} alt="message search icon" />
                </div>
                <Input
@@ -29,7 +30,7 @@ class MessagesSearch extends React.Component {
                         refContent: this.messagesSearchText,
                         placeholder: "Search",
                         style: {
-                           padding: "0 0.7rem",
+                           padding: "0 0.2rem",
                            fontSize: "var(--main-fz)",
                         }
                      }

@@ -1,5 +1,6 @@
 import React from "react";
-import getFormattedDate from "../../../lib/getFormattedDate";
+import getFormattedDate from "../../../lib/createCivilDate/getFormattedDate";
+// import getFormattedDate from "../../../lib/getFormattedDate";
 import chatFolderScroll from "./chatFolderScroll";
 import s from "./ChatMessage.module.css"
 
@@ -24,6 +25,7 @@ class ChatMessage extends React.Component {
    }
 
    render () {
+      // console.log('Render: "ChatMessage"');
       if (this.props.messageState.className === "start" || this.props.messageState.firstMessageOfTheDay || this.time) {
          return (
             <div className={`${s.startMessage}`}>

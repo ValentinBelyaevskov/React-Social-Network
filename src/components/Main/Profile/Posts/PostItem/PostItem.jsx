@@ -3,10 +3,11 @@ import s from "./PostItem.module.css";
 import ButtonsItem from "./PostButtonsItem";
 
 const PostItem = ({ UI, content, post, getFormattedDate}) => {
+   // console.log('Render: "PostItem"');
    return (
       <div className={`${s.postItem} post`}>
          <PostAuthor image={content.user.avatar} name={content.user.name} date={getFormattedDate(post.date, "posts")} />
-         <div className={s.postText}>{content.text}</div>
+         <div className={s.postText}>{post.text}</div>
          <div className={`${s.postImage} post__image`}>
             <img src={post.images} alt="" />
          </div>

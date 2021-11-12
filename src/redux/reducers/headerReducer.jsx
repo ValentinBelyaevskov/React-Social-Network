@@ -1,34 +1,21 @@
+import { fromJS, Map } from "immutable";
 import header from "../data/header";
 
-
-const changeHeaderSearchText = (state, action) => {
-   state.searchText = action.text;
-}
-
-const headerSearch = (state, action) => {
-   alert(state.searchText)     // ! Здесь должен меняться state!!!
-   changeHeaderSearchText(state, {
-      ...action ,
-      text: "",
-   });
-}
-
-
-const initialState = header;
-
+const initialState = fromJS(header);
 
 const headerReducer = (state = initialState, action) => {
+   let stateMap = !Map.isMap(state) ? fromJS(state) : state;
+
    switch (action.type) {
       case "CHANGE-HEADER-SEARCH-TEXT":
-         changeHeaderSearchText(state, action);
-         return state;
+         return stateMap.set("searchText", action.text).toJS();
 
       case "HEADER-SEARCH":
-         headerSearch(state, action)
-         return state;
+         alert(stateMap.toJS().searchText);
+         return stateMap.set("searchText", "").toJS();
 
       default:
-         return state;
+         return stateMap.toJS()
    }
 }
 

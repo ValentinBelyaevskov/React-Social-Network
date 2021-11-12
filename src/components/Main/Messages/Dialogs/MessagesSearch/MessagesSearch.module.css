@@ -1,6 +1,6 @@
 .messagesSearch {
    background-color: var(--message-color);
-   width: 548px;
+   width: 550px;
 }
 
 .messagesSearchWrapper {
@@ -19,7 +19,7 @@
    grid-template-columns: minmax(min-content, max-content) 1fr;
    align-items: center;
 
-   margin: 0 2rem 0 1.25rem;
+   margin: 0 2rem 0 0;
 
    height: 4.5rem;
 }
@@ -28,7 +28,7 @@
    transition: ease 0.1s opacity;
 }
 
-.messagesIcon {
+.messagesIcon:not():first-of-type {
    justify-self: end;
    margin-right: 1.25rem;
    transition: ease 0.1s opacity;
@@ -37,6 +37,11 @@
 .searchIcon,
 .messagesIcon {
    padding: 0.75rem;
+}
+
+.messagesIcon:first-of-type {
+   display: block;
+   padding: 1.25rem 1.25rem 1.25rem 2rem;
 }
 
 .searchIcon:hover,

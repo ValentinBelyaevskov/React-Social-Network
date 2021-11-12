@@ -12,6 +12,18 @@
 
 @media (max-width: 1095px) {
    .friendsOnline {
+      /* display: none; */
+   }
+
+   .friendsOnlineTitle {
+      display: none;
+   }
+   
+   .sidebars .gridContainer {
+      display: none;
+   }
+
+   .showMore {
       display: none;
    }
 }

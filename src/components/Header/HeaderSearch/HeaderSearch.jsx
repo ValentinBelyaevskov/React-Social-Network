@@ -14,6 +14,7 @@ class HeaderSearch extends React.Component {
    }
 
    render () {
+      // console.log('Render: "HeaderSearch"')
       return (
          <div className={`${s.headerSearch} search`}>
             <form className={s.searchForm}>

@@ -1,9 +1,11 @@
+import { fromJS, Map } from "immutable";
 import main from "../data/main";
 
 
 // * messages, chat
-const addNewMessage = (state, action) => {
+const addNewMessage = (stateMap, action) => {
    let nowStr = new Date().getTime();
+   let state = stateMap.toJS();
 
    let newMessageObj = {
       ...state.content.messenger.newMessage,
@@ -14,28 +16,31 @@ const addNewMessage = (state, action) => {
 
    let dialogObj = state.content.messenger.dialogs.find(item => item.name == "Aldous Norman")
    dialogObj.messages.push(newMessageObj);
+
+   return fromJS(state);
 }
 
-const changeDialogsSearchText = (state, action) => {
-   state.content.messenger.search = action.text;
+const changeDialogsSearchText = (stateMap, action) => {
+   return stateMap.setIn(["content", "messenger", "search"], action.text);
 }
 
-const dialogsSearch = (state, action) => {
-   alert(state.content.messenger.search);     // ! Здесь должен меняться state!!!
+const dialogsSearch = (stateMap, action) => {
+   alert(stateMap.toJS().content.messenger.search);     // ! Здесь должен меняться state!!!
 }
 
-const changeDialogText = (state, action) => {
-   state.content.messenger.dialogText = action.text;
+const changeDialogText = (stateMap, action) => {
+   return stateMap.setIn(["content", "messenger", "dialogText"], action.text);
 }
 
 // * Profile
-const changeNewPostText = (state, action) => {
-   state.content.profile.newPost.text = action.currentText;
+const changeNewPostText = (stateMap, action) => {
+   return stateMap.setIn(["content", "profile", "newPost", "text"], action.currentText);
 }
 
-const addNewPost = (state, action) => {
+const addNewPost = (stateMap, action) => {
    let nowStr = new Date().getTime();
-   console.log(state)
+
+   let state = stateMap.toJS()
 
    let newPostObj = {
       ...state.content.profile.newPost,
@@ -44,44 +49,59 @@ const addNewPost = (state, action) => {
 
    state.content.profile.posts.push(newPostObj);
 
-   // debugger
+   return fromJS(state);
+}
+
+const changeCommunityStatus = (stateMap, action) => {
+   let state = stateMap.toJS();
+   let community = state.content.communities.find(item => item.community == action.community);
+   community.status = action.status;
+   return fromJS(state);
 }
 
 
-const initialState = main;
+const initialState = fromJS(main);
 
 
 const mainReducer = (state = initialState, action) => {
+   let stateMap = !Map.isMap(state) ? fromJS(state) : state;
+   let stateCopy = { ...stateMap.toJS() };
+
    switch (action.type) {
       // * messages, chat
       case "ADD-NEW-MESSAGE":
-         addNewMessage(state, action);
-         return state;
+         // try {
+         //    console.log(stateMap.toJS()["UI"]["messages"] === addNewMessage(stateMap, action).toJS()["UI"]["messages"]);
+         //    console.log(stateMap.toJS()["UI"]["messages"], addNewMessage(stateMap, action).toJS()["UI"]["messages"]);
+         // } catch (err) {
+         //    console.log(err.name)
+         // }
+         return addNewMessage(stateMap, action).toJS();
 
       case "DIALOGS-SEARCH":
-         dialogsSearch(state, action);
-         return state;
+         dialogsSearch(stateMap, action);
+         return stateMap.toJS();
 
       case "CHANGE-DIALOGS-SEARCH-TEXT":
-         changeDialogsSearchText(state, action);
-         return state;
+         return changeDialogsSearchText(stateMap, action).toJS();
 
       case "CHANGE-DIALOG-TEXT":
-         changeDialogText(state, action);
-         return state;
+         return changeDialogText(stateMap, action).toJS();
 
       // * Profile
       case "CHANGE-NEW-POST-TEXT":
-         changeNewPostText(state, action)
-         return state;
+         return changeNewPostText(stateMap, action).toJS();
 
       case "ADD-NEW-POST":
-         addNewPost(state, action);
+         return addNewPost(stateMap, action).toJS();
 
-         return state;
+      // ! Нарушение делегирования
+      case "CHANGE-COMMUNITY-STATUS":
+         console.log(action.status, action.community);
+         return changeCommunityStatus(stateMap, action).toJS();
 
       default:
-         return state;
+         return stateMap.toJS();
    }
 }
 

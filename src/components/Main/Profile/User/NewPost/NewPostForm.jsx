@@ -4,6 +4,7 @@ import s from "./NewPostForm.module.css";
 import NewPostIcons from "./NewPostIcons";
 
 const NewPostForm = ({icons, avatar, text, addNewPost, changeNewPostText }) => {
+   // console.log('Render: "NewPostForm"')
    return (
       <form className={s.form}>
          <div className={`new-post-form__avatar ${s.newPostFormAvatar}`}>

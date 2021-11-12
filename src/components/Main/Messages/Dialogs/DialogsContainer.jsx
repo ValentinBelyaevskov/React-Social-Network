@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import getFormattedDate from "../../../../lib/getFormattedDate";
+import getFormattedDate from "../../../../lib/createCivilDate/getFormattedDate";
 import messageShrink from "../../../../lib/messageShrink";
 import Dialogs from "./Dialogs";
 

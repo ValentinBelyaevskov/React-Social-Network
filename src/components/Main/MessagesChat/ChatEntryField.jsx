@@ -2,6 +2,7 @@ import s from "./ChatEntryField.module.css"
 import Textarea from "../../generic/Textarea";
 
 const ChatEntryField = ({dialogText, icons, functions}) => {
+   // console.log('Render: "ChatEntryField"');
    return (
       <form className={s.entryField}>
          <button type="button" className={s.entryFieldButton}>

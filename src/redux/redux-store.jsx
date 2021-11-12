@@ -9,7 +9,7 @@ const reducers = combineReducers(
       main: mainReducer,
       sidebar: sidebarReducer,
    }
-)
+);
 
 const store = createStore(reducers);
 

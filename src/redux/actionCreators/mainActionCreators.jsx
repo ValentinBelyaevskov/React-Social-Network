@@ -39,3 +39,11 @@ export const changeNewPostTextActionCreator = text => (
       currentText: text,
    }
 )
+
+export const changeCommunityStatus = (status, community) => (
+   {
+      type: "CHANGE-COMMUNITY-STATUS",
+      status: status,
+      community: community,
+   }
+)

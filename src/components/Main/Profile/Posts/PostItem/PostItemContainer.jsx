@@ -1,5 +1,6 @@
 import { connect } from "react-redux"
-import getFormattedDate from "../../../../../lib/getFormattedDate"
+import getFormattedDate from "../../../../../lib/createCivilDate/getFormattedDate"
+// import getFormattedDate from "../../../../../lib/getFormattedDate"
 import PostItem from "./PostItem"
 
 const mapDispatchToProps = (dispatch, ownProps) => {

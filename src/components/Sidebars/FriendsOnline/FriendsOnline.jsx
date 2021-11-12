@@ -13,16 +13,17 @@ class FriendsOnline extends React.Component {
    }
 
    render () {
+      // console.log('Render: "FriendsOnline"')
       return (
          <div className={`${s.friendsOnline} ${adaptive.friendsOnline} friends-online`}>
-            <h3 className={s.title}>Online</h3>
-      
+            <h3 className={`${s.title} ${adaptive.friendsOnlineTitle}`}>Online</h3>
+            
             {this.props.state.filter((item) => item.online).slice(0, 6).map((item, i) => (
                <FriendsOnlineItem key={i} image={item.avatar} name={item.name} location={item.location} />
             ))}
       
             {this.props.state.filter((item) => item.online).length <= 6 ? "" :
-               (<div className={s.showMore}>
+               (<div className={`${s.showMore} ${adaptive.showMore}`}>
                   Show more
                </div>)}
          </div>

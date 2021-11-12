@@ -11,31 +11,20 @@ import React from 'react';
 import App from './App';
 import { Provider } from 'react-redux';
 
-const renderEntireTree = (store, appState) => {
-   ReactDOM.render(
-      <React.StrictMode>
+ReactDOM.render(
+   <React.StrictMode>
 
-         <BrowserRouter basename="/React-social-network">
+      {/* <BrowserRouter basename="/React-social-network">
+      </BrowserRouter> */}
 
-         {/* <Router>
-         </Router> */}
-            <Provider store={store}>
-               <App
-                  state={store.getState()}
-                  dispatch={(action) => store.dispatch(action)}
-                  appState={appState}
-                  store={store}
-               />
-            </Provider>
-         </BrowserRouter>
-      </React.StrictMode>,
-      document.getElementById('root')
-   );
-}
-
-store.subscribe(() => renderEntireTree(store, appState));
-
-renderEntireTree(store, appState);
+      <Router>
+         <Provider store={store}>
+            <App/>
+         </Provider>
+      </Router>
+   </React.StrictMode>,
+   document.getElementById('root')
+);
 
 reportWebVitals();
 

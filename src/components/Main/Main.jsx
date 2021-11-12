@@ -5,6 +5,7 @@ import Messages from './Messages/Messages';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import ErrorNotFound from './Error/ErrorNotFound';
 import Chat from './MessagesChat/Chat';
+import Friends from './Friends/Friends';
 
 const Main = () => (
    <main className={`${s.main} ${adaptive.main} main`}>
@@ -15,6 +16,9 @@ const Main = () => (
          </Route>
          <Route exact path="/Messages">
             <Messages/>
+         </Route>
+         <Route exact path="/Friends">
+            <Friends/>
          </Route>
          <Route path="/Messages/0">
             <Chat/>

@@ -5,7 +5,7 @@ import WhoToFollow from "./WhoToFollow";
 const mapStateToProps = (state, ownProps) => {
    return {
       UI: state.sidebar.UI.whatToFollow,
-      state: state.sidebar.content.whoToFollow,
+      state: state.main.content.communities,
    }
 }
 

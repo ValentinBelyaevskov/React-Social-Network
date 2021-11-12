@@ -1,7 +1,7 @@
 import s from './WhoToFollow.module.css'
-import WhoToFollowItem from './WhoToFollowItem'
 import adaptive from '../SidebarsAdaptive.module.css'
 import React from 'react'
+import WhoToFollowItemContainer from './WhoToFollowItemContainer';
 
 class WhoToFollow extends React.Component {
    constructor(props) {
@@ -13,11 +13,12 @@ class WhoToFollow extends React.Component {
    }
 
    render() {
+      // console.log('Render: "WhoToFollow"')
       return (
          <section className={`${s.whoToFollow} ${adaptive.whoToFollow} who-to-follow`}>
             <h3 className={s.title}>{this.props.UI.groups}</h3>
             {this.props.state.map((item, i) => (
-               <WhoToFollowItem
+               <WhoToFollowItemContainer
                   key={i}
                   content={
                      {
@@ -27,7 +28,12 @@ class WhoToFollow extends React.Component {
                         communityLogin: item.communityLogin,
                      }
                   }
-                  UI={this.props.UI}
+                  UI={
+                     {
+                        ...this.props.UI,
+                        followButtonText: item.status,
+                     }
+                  }
                />
             ))}
             <div className={s.showMore}>Show more</div>

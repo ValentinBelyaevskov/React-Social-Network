@@ -14,6 +14,8 @@ class ChatFolder extends React.Component {
    }
 
    render() {
+      // console.log('Render: "ChatFolder"');
+
       if (!this.props.messagesArr.length) return (
          <SendFirstMessage />
       )

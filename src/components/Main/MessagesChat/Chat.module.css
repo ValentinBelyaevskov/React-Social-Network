@@ -5,9 +5,7 @@
    padding-top: 4.5rem;
 
    min-height: 100vh;
-   
-   border: 1px solid var(--border-color);
-   border-top: 0;
+
    background-color: var(--main-color);
 
    font-size: var(--main-fz);

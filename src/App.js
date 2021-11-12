@@ -7,8 +7,8 @@ import Sidebars from './components/Sidebars/Sidebars';
 const App = () => {
    return (
       <div className="wrapper">
-         <Header />
-         <Main />
+         <Header/>
+         <Main/>
          <Sidebars />
       </div>
    );

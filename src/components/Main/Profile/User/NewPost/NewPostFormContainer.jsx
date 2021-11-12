@@ -5,7 +5,6 @@ import NewPostForm from "./NewPostForm"
 const mapStateToProps = (state, ownProps) => {
    const user = state.main.content.profile.user;
    const newPost = state.main.content.profile.newPost;
-   // console.log(newPost)
 
    return {
       avatar: user.avatar,
