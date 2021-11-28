@@ -3,7 +3,9 @@ import React from "react";
 import zeroingTheScroll from "../../../lib/zeroingTheScroll";
 import MessagesSearchContainer from "./Dialogs/MessagesSearch/MessagesSearchContainer";
 import DialogsContainer from "./Dialogs/DialogsContainer";
-import setSidebarPosition from '../../../lib/setSidebarPosition/setSidebarPosition';
+import setSidebarPositionAndSize from '../../../lib/setSidebarPosition/setSidebarPositionAndSize';
+import zeroingScrollTop from '../../../lib/zeroingScrollTop';
+import setPaddingRight from '../../../lib/setPaddingRight';
 
 class Messages extends React.Component {
    constructor(props) {
@@ -12,7 +14,12 @@ class Messages extends React.Component {
 
    componentDidMount() {
       zeroingTheScroll();
-      setSidebarPosition("fixed");
+      setSidebarPositionAndSize("fixed", "Messages");
+      setPaddingRight();
+   }
+
+   componentWillUnmount () {
+      zeroingScrollTop();
    }
 
    render() {

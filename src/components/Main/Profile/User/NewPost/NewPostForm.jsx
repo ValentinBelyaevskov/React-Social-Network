@@ -1,7 +1,7 @@
 import React from "react";
 import Textarea from "../../../../generic/Textarea";
 import s from "./NewPostForm.module.css";
-import NewPostIcons from "./NewPostIcons";
+import NewPostIcon from "./NewPostIcon";
 
 const NewPostForm = ({icons, avatar, text, addNewPost, changeNewPostText }) => {
    // console.log('Render: "NewPostForm"')
@@ -42,7 +42,7 @@ const NewPostForm = ({icons, avatar, text, addNewPost, changeNewPostText }) => {
             <div className={s.icons}>
                {icons.map(
                   (item, i) => (
-                     <NewPostIcons key={i} number={i} image={item} />
+                     <NewPostIcon key={i} number={i} image={item} />
                   )
                )}
             </div>

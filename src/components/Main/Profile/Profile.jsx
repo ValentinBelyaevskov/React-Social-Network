@@ -3,7 +3,6 @@ import User from "./User/User";
 import s from "./Profile.module.css";
 import React from "react";
 import PostsContainer from "./Posts/PostsContainer";
-import setSidebarPosition from "../../../lib/setSidebarPosition/setSidebarPosition";
 
 class Profile extends React.Component  {
    constructor(props) {
@@ -11,8 +10,9 @@ class Profile extends React.Component  {
    }
 
    componentDidMount() {
-      setSidebarPosition("sticky");
-      // setStartSidebarPosition();
+   }
+
+   componentWillUnmount () {
    }
 
    render() {

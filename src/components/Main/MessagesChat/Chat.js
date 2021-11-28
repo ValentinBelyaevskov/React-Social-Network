@@ -1,5 +1,6 @@
 import React from "react";
-import setSidebarPosition from "../../../lib/setSidebarPosition/setSidebarPosition";
+import setPaddingRight from "../../../lib/setPaddingRight";
+import setSidebarPositionAndSize from "../../../lib/setSidebarPosition/setSidebarPositionAndSize";
 import s from "./Chat.module.css";
 import ChatEntryFieldContainer from "./ChatEntryFieldContainer";
 import ChatFolderContainer from "./ChatFolderContainer";
@@ -7,11 +8,12 @@ import ChatHeaderContainer from "./ChatHeaderContainer";
 
 class Chat extends React.Component {
    constructor(props) {
-      super(props)
+      super(props);
    }
 
    componentDidMount () {
-      setSidebarPosition("fixed");
+      setSidebarPositionAndSize("fixed", "Messages");
+      setPaddingRight();
    }
 
    render () {
