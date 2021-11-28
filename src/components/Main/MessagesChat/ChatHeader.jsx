@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom"
 import s from "./ChatHeader.module.css"
 
-const ChatHeader = ({ icons, friends }) => (
+const ChatHeader = ({ icons, friend, number }) => (
    <div className={`${s.header} chat__header`}>
       <NavLink className={s.navLink} to="/Messages">
          <button className={s.backButton}>
@@ -10,10 +10,10 @@ const ChatHeader = ({ icons, friends }) => (
          </button>
       </NavLink>
       <div className={s.interlocutorName}>
-         Aldous Norman
+         {friend.name}
       </div>
       <div className={`${s.interlocutorAvatar} interlocutor-avatar`}>
-         <img src={friends[0].avatar} alt="interlocutor-avatar" />
+         <img src={friend.avatar} alt="interlocutor-avatar" />
       </div>
       <div className={`${s.otherIcon} messages__icon-other`}>
          <img src={icons.other} alt="create a group chat" />

@@ -3,6 +3,8 @@ import User from "./User/User";
 import s from "./Profile.module.css";
 import React from "react";
 import PostsContainer from "./Posts/PostsContainer";
+import setPaddingRight from "../../../lib/setPaddingRight";
+import mainScroll from "../../../lib/mainScroll";
 
 class Profile extends React.Component  {
    constructor(props) {
@@ -10,6 +12,8 @@ class Profile extends React.Component  {
    }
 
    componentDidMount() {
+      setPaddingRight();
+      mainScroll("clear");
    }
 
    componentWillUnmount () {

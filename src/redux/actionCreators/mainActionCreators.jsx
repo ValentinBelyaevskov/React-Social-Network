@@ -1,8 +1,9 @@
 // * messages
-export const addNewMessageActionCreator = () => (
+export const addNewMessageActionCreator = number => (
    {
       type: "ADD-NEW-MESSAGE",
       interlocutor: "",
+      number: number,
    }
 )
 

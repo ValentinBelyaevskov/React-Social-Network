@@ -4,18 +4,27 @@ import main from "../data/main";
 
 // * messages, chat
 const addNewMessage = (stateMap, action) => {
+
+   // debugger;
+
+   
    let nowStr = new Date().getTime();
    let state = stateMap.toJS();
-
+   
    let newMessageObj = {
       ...state.content.messenger.newMessage,
       date: nowStr,
       person: "you",
       messageText: state.content.messenger.dialogText,
    };
-
-   let dialogObj = state.content.messenger.dialogs.find(item => item.name == "Aldous Norman")
+   
+   let dialogs = state.content.messenger.dialogs;
+   let number = (dialogs.length - 1) - action.number;
+   let dialogObj = dialogs[number];
    dialogObj.messages.push(newMessageObj);
+   dialogs.push(dialogs.splice(number, 1)[0]);
+   // debugger;
+   // dialogs = dialogs.splice(number, 1).push(dialogObj);
 
    return fromJS(state);
 }
@@ -40,7 +49,7 @@ const changeNewPostText = (stateMap, action) => {
 const addNewPost = (stateMap, action) => {
    let nowStr = new Date().getTime();
 
-   let state = stateMap.toJS()
+   let state = stateMap.toJS();
 
    let newPostObj = {
       ...state.content.profile.newPost,
@@ -76,7 +85,10 @@ const mainReducer = (state = initialState, action) => {
          // } catch (err) {
          //    console.log(err.name)
          // }
-         return addNewMessage(stateMap, action).toJS();
+         let newState = addNewMessage(stateMap, action).toJS()
+         console.log(newState)
+         return newState;
+         // return addNewMessage(stateMap, action).toJS();
 
       case "DIALOGS-SEARCH":
          dialogsSearch(stateMap, action);

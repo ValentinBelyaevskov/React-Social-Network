@@ -22,8 +22,9 @@ const Dialogs = ({ dialogs, friends, functions }) => {
                         dialogNumber: i,
                         image: friend.avatar,
                         name: friend.name,
-                        message: functions.messageShrink(dialogsItem.messages[0].messageText),
+                        message: functions.messageShrink(dialogsItem.messages[dialogsItem.messages.length - 1].messageText),
                         date: functions.getFormattedDate(dateStr, "dialog"),
+                        dialogId: dialogsItem.dialogId,
                      }
                   }
                />

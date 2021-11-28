@@ -8,9 +8,7 @@
    .whoToFollow {
       display: none;
    }
-}
 
-@media (max-width: 1150px) {
    .friendsOnline {
       /* display: none; */
    }
@@ -29,7 +27,7 @@
 }
 
 @media (max-width: 1000px) {
-   .sidebars {
+   .wrapper .sidebars {
       grid-template-columns: 14.5rem 550px minmax(3rem, auto);
    }
 

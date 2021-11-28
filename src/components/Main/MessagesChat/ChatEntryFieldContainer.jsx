@@ -13,7 +13,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
    return {
       functions: {
          sendButtonHandler: () => {
-            let action = addNewMessageActionCreator();
+            let action = addNewMessageActionCreator(ownProps.number);
             dispatch(action);
             action = changeDialogTextActionCreator("")
             dispatch(action);

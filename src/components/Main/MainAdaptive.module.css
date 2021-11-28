@@ -10,7 +10,7 @@
    }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1000px) {
    .main {
       grid-template-columns: 14.5rem 550px minmax(3rem, auto);
    }

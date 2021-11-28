@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom'
 import s from './DialogsItem.module.css'
 
 const DialogsItem = ({content}) => (
-   <NavLink to={`/Messages/${content.dialogNumber}`}>
+   <NavLink to={`/Messages/${content.dialogId}`}>
       <div className={`${s.dialogsItem} messages__dialogs-item`}>
          <div className={`${s.personAvatar} messages__person-avatar`}>
             <img src={content.image} alt="person avatar" />

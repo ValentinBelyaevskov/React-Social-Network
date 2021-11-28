@@ -6,10 +6,10 @@ import ChatMessage from "./ChatMessage";
 
 const mapStateToProps = (state, ownProps) => {
    const content = state.main.content;
-   const friends = content.friends;
+   const dialog = content.messenger.dialogs.find(item => item.dialogId === ownProps.dialogId);
    const messenger = content.messenger;
    const profile = content.profile;
-   const interlocutor = friends[0];
+   const interlocutor = content.friends.find(item => item.name === dialog.name);
    const messagesArr = messenger.dialogs.find(item => item.name === interlocutor.name).messages
    const user = profile.user;
    const firstMessageDate = getFormattedDate(messagesArr[0].date, "message").date;

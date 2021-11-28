@@ -7,8 +7,8 @@ const setPaddingRight = () => {
    const sidebar = document.querySelector(".sidebars");
    const pageParts = [header, main, sidebar];
 
-   console.log("Высота всего содержимого и высота окна просмотра", wrapper.scrollHeight, window.innerHeight);
-   console.log("Ширина со скроллбаром и без", window.innerWidth, document.documentElement.clientWidth )
+   // console.log("Высота всего содержимого и высота окна просмотра", wrapper.scrollHeight, window.innerHeight);
+   // console.log("Ширина со скроллбаром и без", window.innerWidth, document.documentElement.clientWidth )
 
    pageParts.forEach(item => {
       const paddingRight = 50;
